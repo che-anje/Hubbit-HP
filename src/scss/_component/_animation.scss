@@ -1,0 +1,158 @@
+
+.anim-delay-01{ transition-delay: .1s !important; }
+.anim-delay-02{ transition-delay: .2s !important; }
+.anim-delay-03{ transition-delay: .3s !important; }
+.anim-delay-04{ transition-delay: .4s !important; }
+.anim-delay-05{ transition-delay: .5s !important; }
+.anim-delay-06{ transition-delay: .6s !important; }
+.anim-delay-07{ transition-delay: .7s !important; }
+.anim-delay-08{ transition-delay: .8s !important; }
+.anim-delay-09{ transition-delay: .9s !important; }
+.anim-delay-10{ transition-delay: 1.0s !important; }
+
+/************************************************************
+small
+*************************************************************/
+
+@media #{$small}{
+
+    .anim-delay-sp-01{ transition-delay: .1s !important; }
+    .anim-delay-sp-02{ transition-delay: .2s !important; }
+    .anim-delay-sp-03{ transition-delay: .3s !important; }
+    .anim-delay-sp-04{ transition-delay: .4s !important; }
+    .anim-delay-sp-05{ transition-delay: .5s !important; }
+    .anim-delay-sp-06{ transition-delay: .6s !important; }
+    .anim-delay-sp-07{ transition-delay: .7s !important; }
+    .anim-delay-sp-08{ transition-delay: .8s !important; }
+    .anim-delay-sp-09{ transition-delay: .9s !important; }
+    .anim-delay-sp-10{ transition-delay: 1.0s !important; }
+
+    /*
+    scroll animation
+    */
+    .animation-drop{
+        opacity: 0;
+        transform:translateY(-20px);
+        transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        &.fukidashi{
+            transform:translateY(-20px) translateX(-50%) !important;
+            &.fukidashi-large{
+                transform:translateY(-20px) !important;
+            }
+        }
+    }
+    .animation-drop.scroll-in{
+        opacity: 1;
+        transform:translateY(0);
+        &.fukidashi{
+            transform:translateY(0) translateX(-50%) !important;
+            &.fukidashi-large{
+                transform:translateY(0) !important;
+            }
+        }
+    }
+
+    .animation-up{
+        opacity: 0;
+        transform:translateY(20px);
+        transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-up.scroll-in{
+        opacity: 1;
+        transform:translateY(0);
+    }
+
+    .animation-left-in{
+        opacity: 0;
+        transform:translateX(-20px);
+        transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-left-in.scroll-in{
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    .animation-right-in{
+        opacity: 0;
+        transform:translateX(20px);
+        transition: all 700ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-right-in.scroll-in{
+        opacity: 1;
+        transform:translateX(0);
+    }
+}
+
+/************************************************************
+large
+*************************************************************/
+
+@media #{$large}{
+
+    .anim-delay-pc-01{ transition-delay: .1s !important; }
+    .anim-delay-pc-02{ transition-delay: .2s !important; }
+    .anim-delay-pc-03{ transition-delay: .3s !important; }
+    .anim-delay-pc-04{ transition-delay: .4s !important; }
+    .anim-delay-pc-05{ transition-delay: .5s !important; }
+    .anim-delay-pc-06{ transition-delay: .6s !important; }
+    .anim-delay-pc-07{ transition-delay: .7s !important; }
+    .anim-delay-pc-08{ transition-delay: .8s !important; }
+    .anim-delay-pc-09{ transition-delay: .9s !important; }
+    .anim-delay-pc-10{ transition-delay: 1.0s !important; }
+            
+    /*
+    scroll animation
+    */
+    .animation-drop{
+        opacity: 0;
+        transform:translateY(-30px);
+        transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        &.fukidashi{
+            transform:translateY(-30px) translateX(-50%) !important;
+            &.fukidashi-large{
+                transform:translateY(-30px) !important;
+            }
+        }
+    }
+    .animation-drop.scroll-in{
+        opacity: 1;
+        transform:translateY(0);
+        &.fukidashi{
+            transform:translateY(0) translateX(-50%) !important;
+            &.fukidashi-large{
+                transform:translateY(0) !important;
+            }
+        }
+    }
+
+    .animation-up{
+        opacity: 0;
+        transform:translateY(30px);
+        transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-up.scroll-in{
+        opacity: 1;
+        transform:translateY(0);
+    }
+
+    .animation-left-in{
+        opacity: 0;
+        transform:translateX(-30px);
+        transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-left-in.scroll-in{
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+    .animation-right-in{
+        opacity: 0;
+        transform:translateX(30px);
+        transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    .animation-right-in.scroll-in{
+        opacity: 1;
+        transform:translateX(0);
+    }
+
+}

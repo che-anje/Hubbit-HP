@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+
+.font-corm-400{
+  font-family: 'Cormorant Infant', serif;
+  font-weight: 400;
+}
+
+.font-corm-600{
+  font-family: 'Cormorant Infant', serif;
+  font-weight: 600;
+}
+
+.font-corm-mid{
+  font-family: 'Cormorant', serif;
+}
+
+.font-playfair-ita{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+body{
+  /*font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;*/
+  font-family: "游明朝体 Pr6N R",serif;
+}
+
+.font-yugo{
+  /*font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;*/
+  font-family:"游ゴシック体 Pr6N R",sans-serif;
+}
+
+*::placeholder,input,select,textarea{
+  font-family:"游ゴシック体 Pr6N R",sans-serif !important;
+}
+
+/*
+font icons
+*/
+
+@font-face {
+  font-family: 'icofont';
+  src:  url('/assets/fonts/icofont.eot?q84oqc');
+  src:  url('/assets/fonts/icofont.eot?q84oqc#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icofont.ttf?q84oqc') format('truetype'),
+    url('/assets/fonts/icofont.woff?q84oqc') format('woff'),
+    url('/assets/fonts/icofont.svg?q84oqc#icofont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icofont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e900";
+}

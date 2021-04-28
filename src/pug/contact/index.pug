@@ -1,0 +1,128 @@
+extends ../_component/_layout
+
+block title
+
+  title お問い合わせ | Hubbit,inc
+
+block description
+
+  meta(name="description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+
+block ogp
+
+  meta(property="og:locale",content="ja_JP")
+  meta(property="og:site_name",content="Hubbit,inc")
+  meta(property="og:type",content="website")
+  meta(property="og:url",content="https://www.hubbit.io/contact/")
+  meta(property="og:title",content="お問い合わせ | Hubbit,inc")
+  meta(property="og:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
+  meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:card",content="summary_large_image")
+  meta(name="twitter:title",content="お問い合わせ | Hubbit,inc")
+  meta(name="twitter:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
+
+block seo
+
+  link(rel="canonical",href="https://www.hubbit.io/contact/")
+
+block linkfiles
+
+  link(rel="stylesheet",href="/assets/css/common/common.css",media="all")
+  link(rel="stylesheet",href="/assets/css/contact/index.css",media="all")
+  script(defer,src="/assets/js/common/common.js")
+
+block body
+
+  .bg-gradation
+  .contents-wrapper
+
+    //HEADER
+    section#header.header
+
+    .slide-contents#slideContents
+
+      main
+
+        //TOP
+        section.top#top
+          h1.main-txt-ja#topMainTxtJa
+            |お問い合わせ
+          p.main-txt#topMainTxt
+            picture
+              source(media=pic_media,srcset="/assets/images/contact/contact.png")
+              img(src="/assets/images/contact/contact-sp.png", alt="contact")
+          
+          p.copyright.font-corm-400
+            |Copyright(C) Hubbit,inc All rights reserved
+          .scroll-down
+            span.scroll-down-txt.font-corm-600 Scroll down
+            .arrow
+              img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
+          
+          p.txt-01.font-yugo
+            |お問い合わせは以下よりお願いします。
+            br
+            |2,3営業日以内にご連絡いたします。
+          p.txt-02.font-corm-400
+            |Please contact us bellow.
+            br
+            |We'll check your message in 3 days.
+
+        //***************FORM***************
+        section.form#form
+          form(action="" method="post" class="")
+            .form-items
+              .form-items-row2
+                //姓 LAST NAME
+                .form-item
+                  input(type='text',name='last-name',placeholder='姓 / LAST NAME',required)
+                  span.font-yugo.alert-txt(role='alert') 必須項目に入力してください。
+                //名 FIRST NAME
+                .form-item
+                  input(type='text',name='first-name',placeholder='名 / FIRST NAME',required)
+                  span.font-yugo.alert-txt(role='alert') 必須項目に入力してください。
+              .form-items-row2
+                //E-MAIL
+                .form-item
+                  input(type='text',name='e-mail',placeholder='E-MAIL',required)
+                  span.font-yugo.alert-txt(role='alert') 必須項目に入力してください。
+                //TEL
+                .form-item
+                  input(type='text',name='tel',placeholder='TEL',required)
+                  span.font-yugo.alert-txt(role='alert') 必須項目に入力してください。
+              //お問い合わせ内容
+              .form-item.form-item-select
+                select(name="year",required).
+                  <option selected="" value="" disabled="" class="def">お問い合わせ内容</option>
+                  <option value="お仕事のご依頼">お仕事のご依頼</option>
+                  <option value="サービスについてのお問い合わせ">サービスについてのお問い合わせ</option>
+                  <option value="Happy Endingカードセミナーのご依頼">Happy Endingカードセミナーのご依頼</option>
+                  <option value="遺言書のご相談">遺言書のご相談</option>
+                  <option value="取材のご依頼">取材のご依頼</option>
+                  <option value="事業提携のご相談">事業提携のご相談</option>
+                  <option value="MY LIST 100 のサンプル申し込み">MY LIST 100 のサンプル申し込み</option>
+                  <option value="その他お問い合わせ">その他お問い合わせ</option>
+                span.font-yugo.alert-txt(role='alert') 必須項目に入力してください。
+              //メッセージ
+              .form-item
+                textarea(name="message",rows="7",placeholder='メッセージを入力してください/PLEASE WRITE DOWN HERE.')
+                p.kome-01.font-yugo
+                  |※いただいた情報は弊社の定める
+                  br.sp
+                  a(href='/policy/',target='_blank')
+                    |プライバシーポリシー
+                  |に
+                  br.sp
+                  |同意したとみなされます。
+              //エラーメッセージ
+              .err-mes.font-yugo(role='alert')
+                |入力内容に問題があります。
+                br.sp
+                |確認して再度お試しください。
+              //SUBMIT
+              .submit.round-btn-arrow.btn-color-black
+                input(type='submit',value='SEND')
+        
+      //FOOTER
+      section#footer.footer

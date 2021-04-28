@@ -1,0 +1,186 @@
+/************************************************************
+COMMON
+*************************************************************/
+section.member{
+  
+}
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.member{
+    margin:40px auto 0;
+    padding-top:40px;
+    width:90vw;
+    .title{
+      text-align: center;
+      position: relative;
+      .title-ja{
+        font-size: 13px;
+        line-height: 1em;
+        letter-spacing: 0.2em;
+      }
+      .title-en{
+        margin-top:10px;
+        font-size: 40px;
+        line-height: 1em;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: flex-end;
+        &::before,&::after{
+          content:"";
+          height: 0.5px;
+          flex-grow: 1;
+          background-color:black;
+          transform:translateY(-7px);
+        }
+        &::before{
+          margin-right: 2px;
+        }
+        &::after{
+          margin-left: 2px;
+        }
+      }
+    }
+    .boxes{
+      display: flex;
+      flex-wrap: wrap;
+      .box{
+        width:50%;
+        margin-top:40px;
+        padding:0 3vw;
+        .box-photo{
+
+        }
+        .box-title{
+          margin-top:25px;
+          font-size: 13px;
+        }
+        .box-position{
+          margin-top:9px;
+          font-size: 11px;
+          line-height: 1.272em;
+          white-space: nowrap;
+        }
+        .box-name{
+          margin-top:9px;
+          line-height: 17px;
+          position: relative;
+          .name-ja{
+            font-size: 19px;
+          }
+          .name-en{
+            font-size: 12px;
+          }
+          img.logo-ksi{
+            position: absolute;
+            top:2px;
+            right: 0;
+            width:11.2vw;
+            max-width:95px;
+          }
+        }
+        .box-body{
+          margin-top:15px;
+          .box-txt-01{
+            font-size: 11px;
+            line-height: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.member{
+    margin:70px auto 0;
+    padding-top:70px;
+    width:1150px;
+    .title{
+      text-align: center;
+      position: relative;
+      .title-ja{
+        font-size: 22px;
+        line-height: 1em;
+        letter-spacing: 0.2em;
+      }
+      .title-en{
+        margin-top:20px;
+        font-size: 70px;
+        line-height: 1em;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: flex-end;
+        &::before,&::after{
+          content:"";
+          height: 1px;
+          flex-grow: 1;
+          background-color:black;
+          transform:translateY(-12px);
+        }
+        &::before{
+          margin-right: 15px;
+        }
+        &::after{
+          margin-left: 15px;
+        }
+      }
+    }
+    .boxes{
+      display: flex;
+      flex-wrap: wrap;
+      .box{
+        width:330px;
+        margin-top:90px;
+        margin-right: 80px;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+        .box-photo{
+
+        }
+        .box-title{
+          margin-top:36px;
+          font-size: 16px;
+        }
+        .box-position{
+          margin-top:17px;
+          font-size: 14px;
+        }
+        .box-name{
+          margin-top:17px;
+          line-height: 23px;
+          position: relative;
+          .name-ja{
+            font-size: 26px;
+          }
+          .name-en{
+            font-size: 14px;
+          }
+          img.logo-ksi{
+            position: absolute;
+            top:0;
+            right: 0;
+            width:81px;
+          }
+        }
+        .box-body{
+          margin-top:25px;
+          .box-txt-01{
+            font-size: 15px;
+            line-height: 2em;
+          }
+        }
+      }
+    }
+  }
+}

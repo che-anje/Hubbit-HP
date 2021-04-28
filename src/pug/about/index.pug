@@ -1,0 +1,399 @@
+extends ../_component/_layout
+
+block title
+
+  title ABOUT | Hubbit,inc
+
+block description
+
+  meta(name="description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+
+block ogp
+
+  meta(property="og:locale",content="ja_JP")
+  meta(property="og:site_name",content="Hubbit,inc")
+  meta(property="og:type",content="website")
+  meta(property="og:url",content="https://www.hubbit.io/about/")
+  meta(property="og:title",content="ABOUT | Hubbit,inc")
+  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.png")
+  meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+
+block seo
+
+  link(rel="canonical",href="https://www.hubbit.io/about/")
+
+block linkfiles
+
+  link(rel="stylesheet",href="/assets/css/common/common.css",media="all")
+  link(rel="stylesheet",href="/assets/css/about/index.css",media="all")
+  script(defer,src="/assets/js/common/common.js")
+  //script(defer,src="/assets/js/about/main.js")
+
+block body
+
+  .bg-gradation
+  .contents-wrapper
+
+    //HEADER
+    section#header.header
+
+    .slide-contents#slideContents
+
+      main
+
+        //TOP
+        section.top#top
+          //default size 938 397
+          p.main-txt#topMainTxt
+            img(src="/assets/images/about/top/about.png", alt="")
+          h1.main-txt-ja#topMainTxtJa
+            |私たちについて
+          p.copyright.font-corm-400
+            |Copyright(C) Hubbit,inc All rights reserved
+          .deco.deco-medic
+            .font-corm-600.uppercase.text-anim(data-ms='100') Medical care application
+          .deco.deco-est
+            .font-corm-600.uppercase.text-anim(data-ms='150') est. 2019.3.05
+          .deco.deco-cprl
+            .font-playfair-ita.text-anim(data-ms='50')
+              |Contractual worker / Director dispatch
+              br
+              |Production development / Media
+              br
+              |Recruitment support
+              br
+              |last stage support / Seminar
+          .deco.deco-info
+            .font-corm-400.uppercase.text-anim(data-ms='150') information technology
+          //.scroll-down
+            span.scroll-down-txt.font-corm-600 Scroll down
+            .arrow
+              img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
+        
+        //MESSAGE
+        section.message#message
+          h2.copy-01.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
+            |“社会をより良くしたいという
+            br
+            |１⼈ひとりの想い(bit)を
+            br.sp
+            |形にするための組織(Hub)”
+
+        //COMPANY
+        section.company#company
+          .title
+            h2.title-ja 会社概要
+            .title-en.font-corm-400 COMPANY
+          
+          p.main-txt.font-yugo
+            |⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、
+            br
+            |サービス開発を⾏っています。
+
+          .boxes
+            .box.box-business
+              h3.box-title
+                span.box-title-ja
+                  |事業内容&nbsp;/&nbsp;
+                span.box-title-en.font-corm-600
+                  |BUSINESS
+              .box-body
+                ul
+                  li
+                    |・シニア向けタブレットの開発・運営
+                  li
+                    |・⾃社保有するデータの統計結果、AIの提供
+                  li
+                    |・データの収集⼿段と分析基盤および定期レポートの提供
+                  li
+                    |・データを活⽤した新規事業開発コンサルティング
+                  li
+                    |・医療施設、介護施設向けの業務効率化ツールの開発
+                  li
+                    |・医療施設、介護施設のIT化⽀援、業務効率化⽀援
+                  li
+                    |・セカンドライフに関するメディア受託、運営
+            .box.box-profile
+              h3.box-title
+                span.box-title-ja
+                  |会社概要&nbsp;/&nbsp;
+                span.box-title-en.font-corm-600
+                  |PROFILE
+              .box-body
+                dl
+                  dt
+                    |会社名
+                  dd.font-yugo
+                    |Hubbit株式会社
+                  dt
+                    |設⽴
+                  dd.font-yugo
+                    |2019年3⽉5⽇
+                  dt
+                    |住所
+                  dd.font-yugo
+                    |東京都品川区北品川5-5-15
+                  dt
+                    |電話番号
+                  dd.font-yugo
+                    |050-5850-2698
+                  dt 
+                    |代表
+                  dd.font-yugo
+                    |⾅井 貴紀
+                
+        //NEWS
+        section.news#news
+          .title
+            h2.title-ja お知らせ
+            .title-en.font-corm-400
+              |NEWS
+              br
+              |RELEASE
+          .news-list
+            ul 
+              li
+                .news-box
+                  .news-box-date
+                    span.font-corm-600 2020.07.21
+                  .news-box-body
+                    p.news-box-txt-01.font-yugo
+                      |『月刊 仏事』に掲載いただきました。
+              li
+                .news-box
+                  .news-box-date
+                    span.font-corm-600 2020.06.19
+                  .news-box-body
+                    p.news-box-txt-01.font-yugo
+                      |『月刊 仏事』に掲載いただきました。
+              li
+                .news-box
+                  .news-box-date
+                    span.font-corm-600 2020.04.21
+                  .news-box-body
+                    p.news-box-txt-01.font-yugo
+                      |Yahoo!ニュースに掲載いただきました。​
+              li
+                .news-box
+                  .news-box-date
+                    span.font-corm-600 2020.04.21
+                  .news-box-body
+                    p.news-box-txt-01.font-yugo
+                      |『日刊ゲンダイ』に掲載いただきました。
+              li
+                .news-box
+                  .news-box-date
+                    span.font-corm-600 2020.02.06
+                  .news-box-body
+                    p.news-box-txt-01.font-yugo
+                      |『週刊金曜日』に掲載いただきました。
+
+        //MEMBER
+        section.member#member
+          .title
+            h2.title-ja メンバー
+            .title-en.font-corm-400 MEMBER
+          .boxes
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-usui-kiki.jpg", alt="⾅井 貴紀")
+              .box-title
+                span.font-yugo [代表]
+              .box-name
+                span.name-ja ⾅井 貴紀
+                br
+                span.name-en.font-corm-400 Usui Kiki
+              .box-body
+                p.box-txt-01.font-yugo
+                  |91年⽯川県⽣まれ。早稲⽥⼤学卒業後、ヤフー株式会社に新卒⼊社。営業、マーケティング、新規事業開発を担当。退職後も、新規事業開発に係り、Hubbit株式会社を設⽴。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-kazuta-yoko.jpg", alt="数⽥ 陽⼦")
+              .box-title
+                span.font-yugo [ディレクター]
+              .box-name
+                span.name-ja 数⽥ 陽⼦
+                br
+                span.name-en.font-corm-400 Kazuta Yoko
+              .box-body
+                p.box-txt-01.font-yugo
+                  |⼤阪府⽣まれ。介護⽤品まで⼿掛ける健康器具開発メーカーでMDと営業を経験。その後、ECサイト運営企業にて健康⾷品と化粧品の開発・MDに従事。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-sumi-yukiyo.jpg", alt="鷲⾒ 幸代")
+              .box-title
+                span.font-yugo [ディレクター]
+              .box-name
+                span.name-ja 鷲⾒ 幸代
+                br
+                span.name-en.font-corm-400 Sumi Yukiyo
+              .box-body
+                p.box-txt-01.font-yugo
+                  |岐⾩県⽣まれ。不動産会社にてホステル⽴ち上げ業務と運営マネジメントを⾏ったのち、スペースの新規⽴ち上げ業務とコミュニティイベント企画・運営を⾏なっている。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-hattori-eiji.jpg", alt="服部 英志")
+              .box-title
+                span.font-yugo [マーケター]
+              .box-name
+                span.name-ja 服部 英志
+                br
+                span.name-en.font-corm-400 Hattori Eiji
+              .box-body
+                p.box-txt-01.font-yugo
+                  |東京都⽣まれ。早稲⽥⼤学卒業後、⼤⼿営業代理店に所属しパートナー営業に従事した後、スタートアップにて新規開拓営業を数社経験し、現在に⾄る。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-nakafuji-kyohei.jpg", alt="中藤 恭平")
+              .box-title
+                span.font-yugo [エンジニア]
+              .box-name
+                span.name-ja 中藤 恭平
+                br
+                span.name-en.font-corm-400 Nakafuji Kyohei
+              .box-body
+                p.box-txt-01.font-yugo
+                  |千葉県⽣まれ。東京理科⼤学卒業後、某証券会社に⼊社し基幹システムを担当。その後、⾦融系のシステム開発に従事したのち、独⽴。Hubbit株式会社にCTOとして参画。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-che-anje.jpg", alt="崔 央載")
+              .box-title
+                span.font-yugo [エンジニア]
+              .box-name
+                span.name-ja 崔 央載
+                br
+                span.name-en.font-corm-400 Che Anje
+              .box-body
+                p.box-txt-01.font-yugo
+                  |96年⽣まれ。名古屋出⾝。トヨタの⼦会社で社会⼈デビューしたのち、エンジニアになろうと奮起し、退社独学後、Hubbit株式会社に⼊社。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-kosuda-reika.jpg", alt="⼩須⽥ 玲花")
+              .box-title
+                span.font-yugo [エンジニア]
+              .box-name
+                span.name-ja ⼩須⽥ 玲花
+                br
+                span.name-en.font-corm-400 Kosuda Reika
+              .box-body
+                p.box-txt-01.font-yugo
+                  |群⾺県⽣まれ。千葉⼤学⼤学院に在学中。研究室では機械学習を⽤いた医⽤画像処理に関するに研究を⾏っています。2020年6⽉にインターン⽣として参画。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/member/photo-oku-haruki.jpg", alt="奥 春樹")
+              .box-title
+                span.font-yugo [デザイナー]
+              .box-name
+                span.name-ja 奥 春樹
+                br
+                span.name-en.font-corm-400 Oku Haruki
+              .box-body
+                p.box-txt-01.font-yugo
+                  |兵庫県⽣まれ。株式会社乃村⼯藝社に⼊社し、お台場のガンダム⽴像など⼤型案件を担当。その後、2019年建築設計事務所を設⽴し、Hubbitのパートナーとなる。
+
+        //ADVISER
+        section.member#adviser
+          .title
+            h2.title-ja 顧問
+            .title-en.font-corm-400 ADVISER
+          .boxes
+            .box
+              .box-photo
+                img(src="/assets/images/about/adviser/photo-kimura-hiroaki.jpg", alt="木村 浩彰")
+              .box-title
+                span.font-yugo [データ研究協力]
+              .box-position
+                |広島大学病院
+                br.sp
+                |リハビリテーション科科長 
+                br.sp
+                |教授
+              .box-name
+                span.name-ja 木村 浩彰
+                br
+                span.name-en.font-corm-400 Kimura Hiroaki
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/adviser/photo-bessho-naoya.jpg", alt="別所 直哉")
+              .box-title
+                span.font-yugo [アドバイザー]
+              .box-position
+                |紀尾井町戦略研究所株式会社 
+                br.sp
+                |代表取締役社長
+              .box-name
+                span.name-ja 別所 直哉
+                br
+                span.name-en.font-corm-400 Bessho Naoya
+                img.logo-ksi(src="/assets/images/about/adviser/logo-ksi.png",alt="紀尾井町戦略研究所株式会社")
+              .box-body
+                p.box-txt-01.font-yugo
+                  |1999年にヤフー株式会社入社。法務部長、法務本部長、執行役員（法務、広報、政策企画、公共サービス、リスクマネジメント管掌）を経て2018年４月よりシニアアドバイザー、紀尾井町戦略研究所株式会社理事長。一般社団法人日本IT団体連盟理事。立教大学大学院21世紀社会デザイン研究科兼任講師も務める。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/adviser/photo-shirakawa-touko.jpg", alt="白河 桃子")
+              .box-title
+                span.font-yugo [アドバイザー]
+              .box-position
+                |少子化ジャーナリスト
+              .box-name
+                span.name-ja 白河 桃子
+                br
+                span.name-en.font-corm-400 Shirakawa Touko
+              .box-body
+                p.box-txt-01.font-yugo
+                  |昭和女子大学客員教授、相模女子大学大学院 特任教授、東京大学 大学院情報学環客員研究員。女性のライフキャリア、ワークライフバランス、少子化、働き方改革、ダイバーシティなどをテーマとする。内閣府男女局「男女共同参画会議　重点方針専門調査会」専門委員、内閣官房「働き方改革実現会議」有識者議員など活躍多数。
+
+            .box
+              .box-photo
+                img(src="/assets/images/about/adviser/photo-blank.jpg", alt="")
+              .box-title
+                span.font-yugo [研究会]
+              .box-name
+                span.name-ja ◯◯◯◯◯◯
+                br
+                span.name-en.font-corm-400 xxxxxxxxxx
+              .box-body
+                p.box-txt-01.font-yugo
+                  |医療と介護の狭間を超えて、今我々が目指すべきケアを考え、発信していく。
+
+        //RECRUIT
+        section.recruit#recruit
+          h2.title-ja.text-anim.scroll-trigger
+            |採用情報
+          .title-en.font-corm-400.animation-up
+            |RECRUIT
+          p.copy-01.text-anim.scroll-trigger(data-yugos='["⼀","緒","未","来","創","仲","間","募","集"]',data-ms='75')
+            |“Hubbitは、
+            br.sp
+            |⼀緒に未来を創っていく”
+            br
+            |仲間を募集しています。
+          a.round-btn-arrow(href='/recruit/')
+            span.font-corm-600 VIEW MORE
+
+        //CONTACT
+        section.contact#contact
+          h2.title-ja.text-anim.scroll-trigger
+            |お問い合わせ
+          .title-en.font-corm-400.animation-up
+            |CONTACT
+          .animation-up
+            p.copy-01
+              |お問い合わせ、ご要望がございましたら、
+              br.sp
+              |こちらからご連絡ください。
+            a.round-btn-arrow.btn-color-black(href='/contact/')
+              span.font-corm-600 CONTACT
+
+      //FOOTER
+      section#footer.footer

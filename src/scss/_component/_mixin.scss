@@ -1,0 +1,113 @@
+//absoluteでの配置
+@mixin position-absolute($pos){
+  @if $pos == 'center'{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  } @elseif $pos == 'center-top'{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+  } @elseif $pos == 'center-left'{
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+  }
+}
+
+@mixin icofont(){
+  font-family: 'icofont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+round-btn-arrow
+*/
+
+@mixin round-btn-arrow {
+  border:1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @media #{$small}{
+    width:250px;
+    height: 54px;
+    border-radius: 27px;
+    span{
+      font-size: 16px;
+      letter-spacing: 0.1em;
+    }
+    &::after{
+      content: "\e900";
+      @include icofont;
+      display: inline-block;
+      font-size: 10px;
+      position: absolute;
+      top:50%;
+      right: 5px;
+      transform:translateY(-50%) scale(.5);
+      pointer-events: none;
+    }
+  }
+  @media #{$large}{
+    width:300px;
+    height: 60px;
+    border-radius: 30px;
+    span{
+      font-size: 16px;
+      letter-spacing: 0.1em;
+    }
+    &::after{
+      content: "\e900";
+      @include icofont;
+      display: inline-block;
+      font-size: 10px;
+      position: absolute;
+      top:50%;
+      right: 20px;
+      transform:translateY(-50%) scale(.6,.55);
+      pointer-events: none;
+    }
+  }
+  &.btn-color-black{
+    background-color: #191919;
+    color:white;
+  }
+}
+
+/*
+kazari
+*/
+
+@mixin kazari {
+  @media #{$small}{
+    width:70px;
+    height: 70px;
+    display: block;
+    background-image: url("/assets/images/common/kazari.svg");
+    background-size: 70px 70px;
+    background-position: left bottom;
+  }
+  @media #{$large}{
+    width:140px;
+    height: 140px;
+    display: block;
+    background-image: url("/assets/images/common/kazari.svg");
+    background-size: 140px 140px;
+    background-position: left bottom;
+  }
+}
+
+
+

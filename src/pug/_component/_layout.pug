@@ -1,0 +1,42 @@
+include ./_config
+
+doctype html
+html(lang="ja")
+	head
+		meta(charset="UTF-8")
+		meta(content="IE=edge",http-equiv="X-UA-Compatible")
+		meta(name="viewport",content="width=device-width")
+		
+		block title
+
+			title タイトル
+
+		block description
+
+			meta(name="description",content="")
+
+		block ogp
+
+			meta(property="og:locale",content="ja_JP")
+			meta(property="og:site_name",content="")
+			meta(property="og:type",content="website")
+			meta(property="og:url",content="https://")
+			meta(property="og:title",content="")
+			meta(property="og:image",content="https://")
+			meta(property="og:description",content="")
+
+		block seo
+
+			link(rel="canonical",href="http://www.sample.jp/")
+
+		block linkfiles
+
+		script(type="text/javascript",src="//typesquare.com/3/tsst/script/ja/typesquare.js?606c1ad49ca44f29bded6c52ac1e02e5",charset="utf-8")
+
+
+	body(id=bodyId,class=bodyClass)
+
+		block body
+
+		.webfont-chars.font-yugo
+			|利⽤規約プライバシーポリシー〒141-0001 東京都品川区北品川5-5-15TEL : 050-5850-2698

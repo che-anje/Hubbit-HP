@@ -1,0 +1,155 @@
+extends ../_component/_layout
+
+block title
+
+  title SERVICE | Hubbit,inc
+
+block description
+
+  meta(name="description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+
+block ogp
+
+  meta(property="og:locale",content="ja_JP")
+  meta(property="og:site_name",content="Hubbit,inc")
+  meta(property="og:type",content="website")
+  meta(property="og:url",content="https://www.hubbit.io/service/")
+  meta(property="og:title",content="SERVICE | Hubbit,inc")
+  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.png")
+  meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+
+block seo
+
+  link(rel="canonical",href="https://www.hubbit.io/service/")
+
+block linkfiles
+
+  link(rel="stylesheet",href="/assets/css/common/common.css",media="all")
+  link(rel="stylesheet",href="/assets/css/service/index.css",media="all")
+  script(defer,src="/assets/js/common/common.js")
+  //script(defer,src="/assets/js/service/main.js")
+
+block body
+
+  .bg-gradation
+  .contents-wrapper
+
+    //HEADER
+    section#header.header
+
+    .slide-contents#slideContents
+
+      main
+
+        //TOP
+        section.top#top
+          //default size 938 397
+          p.main-txt#topMainTxt
+            img(src="/assets/images/service/top/service.png", alt="")
+          h1.main-txt-ja#topMainTxtJa
+            |サービス内容
+          p.copyright.font-corm-400
+            |Copyright(C) Hubbit,inc All rights reserved
+          .deco.deco-medic
+            .font-corm-600.uppercase.text-anim(data-ms='100') Medical care application
+          .deco.deco-est
+            .font-corm-600.uppercase.text-anim(data-ms='150') est. 2019.3.05
+          .deco.deco-cprl
+            .font-playfair-ita.text-anim(data-ms='50')
+              |Contractual worker / Director dispatch
+              br
+              |Production development / Media
+              br
+              |Recruitment support
+              br
+              |last stage support / Seminar
+          .deco.deco-info
+            .font-corm-400.uppercase.text-anim(data-ms='150') information technology
+          //.scroll-down
+            span.scroll-down-txt.font-corm-600 Scroll down
+            .arrow
+              img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
+        
+        //MESSAGE
+        section.message#message
+          h2.copy-01.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
+            |“Hubbitは
+            br.sp
+            |より良い社会を⽬指し、
+            br
+            |⼈々が抱える課題に
+            br.sp
+            |１つひとつ向き合って
+            br
+            |⽇常に無くてはならない
+            br.sp
+            |サービスを創り出します。”
+
+        //SERVICES01
+        section.services.services-01#service01
+          .service-box
+            .service-img
+              img(src="/assets/images/service/services/tablet.png", alt="タブレット")
+            .service-box-txts
+              .service-box-txts-inner
+                .service-num
+                  img(src="/assets/images/service/services/service-num-01.png", alt="service 01")
+                h3.service-txt-01
+                  |有料⽼⼈ホーム
+                  br.sp
+                  |⼊居者向け
+                  br.pc
+                  |専⽤タブレット
+                p.service-txt-02.font-yugo
+                  |コロナ禍でも安⼼と娯楽を提供し、⼊居者の満⾜度を上げ、業務効率化も図れる有料⽼⼈ホーム⼊居者向け専⽤タブレットです。
+                  br
+                  |ご⾼齢でも安⼼して使えるアプリケーションが搭載されており、サポートも付いているので、施設側への負担が減らせます。
+
+        //SERVICES02
+        section.services.services-02#service02
+          .service-box
+            .service-img
+              img(src="/assets/images/service/services/golden-years.png", alt="golden years")
+            .service-box-txts
+              .service-box-txts-inner
+                .service-num
+                  img(src="/assets/images/service/services/service-num-02.png", alt="service 02")
+                h3.service-txt-01
+                  |オウンドメディア
+                p.service-txt-02.font-yugo
+                  |セカンドライフを豊かにするための情報発信「GoldenYears」と動画メディア「ピンコロ⼤学」を運営しています。「備える」「学ぶ」「楽しむ」の切り⼝から、より良い⽣活をするための情報をお届けしています。Excel版エンディングノートの配布も⾏なっております。
+                a.round-btn-arrow(href='https://gldnyears.com',target="_blank")
+                  span.font-corm-600 VIEW WEBSITE
+
+        //SERVICES03
+        section.services.services-03#service03
+          .service-box
+            .service-img
+              img(src="/assets/images/service/services/my-list-100.png", alt="MY LIST 100")
+            .service-box-txts
+              .service-box-txts-inner
+                .service-num
+                  img(src="/assets/images/service/services/service-num-03.png", alt="service 03")
+                h3.service-txt-01
+                  |MY LIST 100
+                p.service-txt-02.font-yugo
+                  |これからの⼈⽣をよりよく、⾃分らしく⽣きるために⾃分⾃⾝のやりたいことや情報の整理、これからの希望を記しておくためのエンディングノートです。
+                a.round-btn-arrow(href='https://gldnyears.com',target="_blank")
+                  span.font-corm-600 VIEW WEBSITE
+
+        //CONTACT
+        section.contact#contact
+          h2.title-ja.text-anim.scroll-trigger
+            |お問い合わせ
+          .title-en.font-corm-400.animation-up
+            |CONTACT
+          .animation-up
+            p.copy-01
+              |お問い合わせ、ご要望がございましたら、
+              br.sp
+              |こちらからご連絡ください。
+            a.round-btn-arrow.btn-color-black(href='/contact/')
+              span.font-corm-600 CONTACT
+
+      //FOOTER
+      section#footer.footer

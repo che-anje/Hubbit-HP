@@ -1,0 +1,119 @@
+/************************************************************
+COMMON
+*************************************************************/
+section.news{
+  
+}
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.news{
+    margin:30px auto 0;
+    padding-top:30px;
+    width:84vw;
+    .title{
+      .title-ja{
+        font-size: 13px;
+        line-height: 1em;
+        letter-spacing: 0.2em;
+      }
+      .title-en{
+        margin-top:10px;
+        font-size: 52px;
+        line-height: 0.9em;
+        letter-spacing: 0.05em;
+      }
+    }
+    .news-list{
+      margin-top:30px;
+      ul{
+        li{
+          list-style:none;
+          &:first-child{
+            .news-box{
+              border-top:1px solid #bec5d8;
+            }
+          }
+          .news-box{
+            border-bottom:1px solid #bec5d8;
+            padding:22px 0;
+            .news-box-date{
+              font-size: 12px;
+            }
+            .news-box-body{
+              margin-top:5px;
+              .news-box-txt-01{
+                font-size: 13px;
+                line-height: 1.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.news{
+    margin:150px auto 0;
+    width:1150px;
+    position: relative;
+    padding:120px 0 0 425px;
+    .title{
+      position: absolute;
+      top:0;
+      left:30px;
+      .title-ja{
+        font-size: 22px;
+        line-height: 1em;
+        letter-spacing: 0.2em;
+      }
+      .title-en{
+        margin-top:15px;
+        font-size: 78px;
+        line-height: 0.9em;
+        letter-spacing: 0.05em;
+      }
+    }
+    .news-list{
+      width:725px;
+      ul{
+        li{
+          list-style:none;
+          &:first-child{
+            .news-box{
+              border-top:1px solid #bec5d8;
+            }
+          }
+          .news-box{
+            display: flex;
+            border-bottom:1px solid #bec5d8;
+            padding:35px 0;
+            .news-box-date{
+              width:135px;
+              font-size: 18px;
+              padding-left:25px;
+            }
+            .news-box-body{
+              width:725px - 135;
+              .news-box-txt-01{
+                font-size: 17px;
+                line-height: 1.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

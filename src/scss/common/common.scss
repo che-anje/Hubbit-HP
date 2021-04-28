@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+@import "../_component/config";
+@import "../_component/mixin";
+@import "../_component/normalize";
+@import "../_component/fonts";
+@import "../_component/colors";
+@import "../_component/animation";
+
+@import "./swiper";
+@import "./header";
+@import "./footer";
+@import "./contact";
+@import "./btn";
+@import "./parts";
+@import "./text-anim";
+
+
+html{
+	height: 100%;
+	overflow: auto;
+}
+
+body{
+	/*ipad 文字サイズ対策*/
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+
+html,body{
+	width:100%;
+}
+
+main{
+	width:100%;
+	display:block;
+}
+
+*, *:before, *:after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing:border-box;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+a img {
+    border-style:none;
+}
+
+img{
+	vertical-align: top;
+	width:100%;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,figure,p{
+	margin: 0;
+	padding: 0;
+}
+
+/*
+clear fix
+*/
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/*
+ofi　
+*/
+
+.ofi{
+	object-fit: cover;
+	object-position:center;
+	font-family:'object-fit: cover; object-position: center';
+}
+
+/*
+pre-wrap
+*/
+
+.pre-wrap{
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/************************************************************
+COMMON
+*************************************************************/
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.webfont-chars{
+	display: none;
+}
+
+@keyframes bggradation{
+  0%{
+    /*background-position: 0 0;*/
+		opacity: 0;
+  }
+  100%{
+    /*background-position: 100% 0;*/
+		opacity: 1;
+  }
+}
+
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+	br.pc{
+		display: none;
+	}
+
+	body{
+		min-width:100vw;
+		overflow: hidden;
+	}
+
+	.bg-gradation{
+		position: fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height: 100%;
+		background: linear-gradient(to right,#f2d9cf,#c4d3f4 55%,#c4d3f4);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		&::after{
+			content:"";
+			display: block;
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			background: linear-gradient(to left,#f4d9ce,#c3d2f5 55%,#c3d2f5);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			animation:10s ease-in-out 0s infinite alternate forwards running bggradation;
+		}
+	}
+
+	.slide-contents{
+		transition:.4s ease;
+		position: relative;
+		&.hide{
+			transform:translateX(-100vw);
+		}
+	}
+
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+	br.sp{
+		display: none;
+	}
+
+  body{
+		min-width:$pc_min_width;
+		overflow: hidden;
+	}
+
+	.bg-gradation{
+		position: fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height: 100%;
+		background: linear-gradient(to right,#f4d9ce,#c3d2f5 55%,#c3d2f5);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		/*animation:10s ease-in-out 0s infinite alternate forwards running bggradation;*/
+		&::after{
+			content:"";
+			display: block;
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			background: linear-gradient(to left,#f4d9ce,#c3d2f5 55%,#c3d2f5);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			animation:10s ease-in-out 0s infinite alternate forwards running bggradation;
+		}
+	}
+
+	.contents-wrapper{
+		position: relative;
+	}
+
+}

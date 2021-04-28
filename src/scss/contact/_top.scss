@@ -1,0 +1,107 @@
+
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.top{
+    padding-top:140px;
+    text-align: center;
+    .main-txt-ja{
+      font-size: 13px;
+      letter-spacing: 0.2em;
+    }
+    .main-txt{
+      width:326px;
+      margin:15px auto 0;
+    }
+    .copyright{
+      display: none;
+    }
+    .scroll-down{
+      display: none;
+    }
+    .txt-01{
+      margin-top:45px;
+      font-size: 13px;
+      line-height: 2.23em;
+      letter-spacing: 0.1em;
+      color:#434343;
+    }
+    .txt-02{
+      margin-top:25px;
+      font-size: 13px;
+      line-height: 2.23em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color:#434343;
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.top{
+    position: relative;
+    text-align: center;
+    padding-top:220px;
+    .main-txt-ja{
+      font-size: 22px;
+      letter-spacing: 0.2em;
+    }
+    .main-txt{
+      margin:30px auto 0;
+      width:733px;
+    }
+    .copyright{
+      position: absolute;
+      top:264px;
+      left:40px;
+      z-index: 20;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      transform-origin:left bottom;
+      transform: rotate(90deg);
+    }
+    .scroll-down{
+      width:30px;
+      position: absolute;
+      top:680px;
+      right: 35px;
+      z-index: 1;
+      .scroll-down-txt{
+        display: inline-block;
+        font-size: 14px;
+        transform: rotate(90deg);
+        position: absolute;
+        top:43px;
+        right: -24px;
+        white-space: nowrap;
+      }
+      .arrow{
+        width:8px;
+      }
+    }
+    .txt-01{
+      margin-top:160px;
+      font-size: 16px;
+      line-height: 2.25em;
+      letter-spacing: 0.1em;
+      color:#434343;
+    }
+    .txt-02{
+      margin-top:40px;
+      font-size: 16px;
+      line-height: 2.25em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color:#434343;
+    }
+  }
+}

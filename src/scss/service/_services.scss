@@ -1,0 +1,230 @@
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.services{
+    margin-top:40px;
+    padding-top:40px;
+    position: relative;
+    &.services-02{
+      .service-box{
+        .service-img{
+          padding:120px 40px;
+        }
+        .service-box-txts{
+          .service-box-txts-inner{
+            .service-num{
+              width:70px;
+              &::before{
+                top:40px;
+                left:44px;
+              }
+            }
+            a.round-btn-arrow{
+              width:250px;
+              height: 54px;
+              border-radius: 27px;
+              margin:30px auto 0;
+            }
+          }
+        }
+      }
+    }
+    &.services-03{
+      .service-box{
+        .service-img{
+          padding:120px 30px;
+        }
+        .service-box-txts{
+          .service-box-txts-inner{
+            .service-num{
+              width:72px;
+              &::before{
+                top:40px;
+                left:44px;
+              }
+            }
+            .service-txt-01{
+              margin-top:0;
+            }
+            a.round-btn-arrow{
+              width:250px;
+              height: 54px;
+              border-radius: 27px;
+              margin:30px auto 0;
+            }
+          }
+        }
+      }
+    }
+    .service-box{
+      .service-img{
+        background-color: rgba(#fff, .6);
+        padding:20px 40px;
+      }
+      .service-box-txts{
+        position: relative;
+        .service-box-txts-inner{
+          width:84vw;
+          margin:0 auto;
+          .service-num{
+            margin-top:42px;
+            width:62px;
+            position: relative;
+            &::before{
+              content:"";
+              @include kazari;
+              position: absolute;
+              top:39px;
+              left:43px;
+              width:37px !important;
+              height: 37px !important;
+
+            }
+          }
+          .service-txt-01{
+            font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+            font-weight: bold;
+            font-size: 21px;
+            line-height: 1.476em;
+            padding-left:65px;
+            letter-spacing: 0.05em;
+            margin-top:10px;
+            white-space: nowrap;
+          }
+          .service-txt-02{
+            font-size: 13px;
+            line-height: 2.23em;
+            padding-left:25px;
+            margin-top:23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.services{
+    margin-top:165px;
+    position: relative;
+    &.services-02{
+      .service-box{
+        flex-direction: row-reverse;
+        .service-img{
+          padding:275px 145px;
+        }
+        .service-box-txts{
+          width:600px;
+          transform:translateX(60px);
+          .service-box-txts-inner{
+            padding-top:170px;
+            .service-num{
+              top:58px;
+              left:0;
+              &::before{
+                top:35px;
+                left:55px;
+              }
+            }
+            .service-txt-01{
+              padding-left:95px;
+            }
+            .service-txt-02{
+              margin:58px 0 0 60px;
+              width:540px;
+            }
+            a.round-btn-arrow{
+              height: 56px;
+              border-radius: 28px;
+              margin:45px 0 0 60px;
+            }
+          }
+        }
+      }
+    }
+    &.services-03{
+      .service-box{
+        .service-img{
+          padding:270px 100px;
+        }
+        .service-box-txts{
+          .service-box-txts-inner{
+            .service-num{
+              width:111px;
+              &::before{
+                top:50px;
+                left:64px;
+              }
+            }
+            a.round-btn-arrow{
+              height: 56px;
+              border-radius: 28px;
+              margin:58px 0 0 85px;
+            }
+          }
+        }
+      }
+    }
+    .service-box{
+      max-width: 1800px;
+      width:100%;
+      margin:0 auto;
+      display: flex;
+      .service-img{
+        width:56%;
+        background-color: rgba(#fff, .6);
+        padding:10px 70px;
+        img{
+          /*width:calc(100% + 25px);*/
+        }
+      }
+      .service-box-txts{
+        width:44%;
+        .service-box-txts-inner{
+          padding-top:220px;
+          position: relative;
+          .service-num{
+            width:94px;
+            position: absolute;
+            top:104px;
+            left:-40px;
+            z-index: 2;
+            &::before{
+              content:"";
+              @include kazari;
+              position: absolute;
+              top:49px;
+              left:60px;
+              width:73px !important;
+              height: 73px !important;
+
+            }
+          }
+          .service-txt-01{
+            font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 1.6em;
+            padding-left:55px;
+            letter-spacing: 0.1em;
+          }
+          .service-txt-02{
+            font-size: 17px;
+            line-height: 2.235em;
+            margin:58px 0 0 85px;
+            width:485px;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+    }
+  }
+}
