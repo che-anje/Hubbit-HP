@@ -17,8 +17,12 @@ Stickyfill.add(elements);
 import IncludeHTML from "./_include";
 IncludeHTML('/assets/inc/header.html', 'header');
 IncludeHTML('/assets/inc/footer.html', 'footer');
+IncludeHTML('/assets/inc/contact.html', 'contact');
 
-import ScrollAnimation from './_scroll_animation';
+import TextAnim from '../modules/_text_anim';
+TextAnim();
+
+import ScrollAnimation from '../modules/_scroll_animation';
 ScrollAnimation();
 
 Number.isNaN = Number.isNaN || function (any) {

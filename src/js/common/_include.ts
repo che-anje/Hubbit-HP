@@ -2,6 +2,7 @@ import "es6-promise/auto";
 import "fetch-polyfill";
 import Header from "./_header";
 import Footer from "./_footer";
+import { SpanWrap } from '../modules/_span_wrap';
 
 const IncludeHTML = (includeFilePath, targetID) => {
   fetch(includeFilePath, {
@@ -23,6 +24,20 @@ const IncludeHTML = (includeFilePath, targetID) => {
       } else if (targetID == 'header') {
 
         Header();
+
+      } else if (targetID == 'contact') {
+        
+        let targetTextsElms = document.querySelectorAll('#contact .text-anim');
+
+        for (let i = 0; i < targetTextsElms.length; i++) {
+
+          let target = targetTextsElms[i] as HTMLElement;
+
+          let yugos = target.dataset.yugos;
+          let ms = target.dataset.ms;
+
+          new SpanWrap(target, yugos, ms);
+        }
 
       }
     }

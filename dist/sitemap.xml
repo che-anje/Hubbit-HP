@@ -2,14 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 <url>
-  <loc>https://www.sample.jp/</loc>
+  <loc>https://www.hubbit.io/</loc>
   <priority>1.0</priority>
-  <lastmod>2021-03-12</lastmod>
+  <lastmod>2021-05-01</lastmod>
 </url>
 <url>
-  <loc>https://www.sample.jp/about/</loc>
+  <loc>https://www.hubbit.io/about/</loc>
   <priority>0.8</priority>
-  <lastmod>2021-03-12</lastmod>
+  <lastmod>2021-05-01</lastmod>
+</url>
+<url>
+  <loc>https://www.hubbit.io/service/</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-05-01</lastmod>
+</url>
+<url>
+  <loc>https://www.hubbit.io/contact/</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-05-01</lastmod>
+</url>
+<url>
+  <loc>https://www.hubbit.io/policy/</loc>
+  <priority>0.6</priority>
+  <lastmod>2021-05-01</lastmod>
+</url>
+<url>
+  <loc>https://www.hubbit.io/term/</loc>
+  <priority>0.6</priority>
+  <lastmod>2021-05-01</lastmod>
 </url>
 
 </urlset>

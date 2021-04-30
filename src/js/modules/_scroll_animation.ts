@@ -4,7 +4,7 @@ const ScrollAnimation = () => {
   window.addEventListener('scroll',(e)=>{
 
     let winH = window.innerHeight;
-    let inY = winH * 0.2;
+    let inY = winH * 0.3;
     
     let dropElms = document.querySelectorAll('.animation-drop');
     let upElms = document.querySelectorAll('.animation-up');

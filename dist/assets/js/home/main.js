@@ -1208,62 +1208,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swip
 
 /***/ }),
 
-/***/ "./src/js/home/_elm_anim.ts":
-/*!**********************************!*\
-  !*** ./src/js/home/_elm_anim.ts ***!
-  \**********************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\nvar ElmAnim = function () {\n    window.addEventListener('scroll', function (e) {\n        var winH = window.innerHeight;\n        var inY = winH * 0.3;\n        var dropElms = document.querySelectorAll('.animation-drop');\n        var upElms = document.querySelectorAll('.animation-up');\n        var leftInElms = document.querySelectorAll('.animation-left-in');\n        var rightInElms = document.querySelectorAll('.animation-right-in');\n        var bubbleElms = document.querySelectorAll('.animation-bubble');\n        for (var i = 0; i < dropElms.length; i++) {\n            var elm = dropElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n        for (var i = 0; i < upElms.length; i++) {\n            var elm = upElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n        for (var i = 0; i < leftInElms.length; i++) {\n            var elm = leftInElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n        for (var i = 0; i < rightInElms.length; i++) {\n            var elm = rightInElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n        for (var i = 0; i < bubbleElms.length; i++) {\n            var elm = bubbleElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n    });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (ElmAnim);\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/_elm_anim.ts?");
-
-/***/ }),
-
-/***/ "./src/js/home/_kv.ts":
-/*!****************************!*\
-  !*** ./src/js/home/_kv.ts ***!
-  \****************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\nvar Kv = function () {\n    window.addEventListener('load', function (e) {\n        var top = document.getElementById('top');\n        var medic = document.querySelector('#top .deco-medic');\n        var est = document.querySelector('#top .deco-est');\n        var cprl = document.querySelector('#top .deco-cprl');\n        var info = document.querySelector('#top .deco-info');\n        setTimeout(function () {\n            top.classList.add('show');\n            setTimeout(function () {\n                if (medic)\n                    medic.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (est)\n                    est.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (cprl)\n                    cprl.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (info)\n                    info.classList.add('show');\n            }, 1500);\n        }, 500);\n    });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Kv);\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/_kv.ts?");
-
-/***/ }),
-
-/***/ "./src/js/home/_span_wrap.ts":
-/*!***********************************!*\
-  !*** ./src/js/home/_span_wrap.ts ***!
-  \***********************************/
-/*! namespace exports */
-/*! export SpanWrap [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"SpanWrap\": function() { return /* binding */ SpanWrap; }\n/* harmony export */ });\nvar SpanWrap = /** @class */ (function () {\n    function SpanWrap(target, yugos, ms) {\n        this.count = 0;\n        this.styleClass = '';\n        this.styleClassYugo = 'font-yugo';\n        this.ms = 100;\n        this.target = target;\n        this.yugos = yugos;\n        if (ms)\n            this.ms = ms;\n        this.nodes = this.target.childNodes;\n        this.convert();\n    }\n    SpanWrap.prototype.convert = function () {\n        var _this = this;\n        var spanWrapText = \"\";\n        this.nodes.forEach(function (node) {\n            if (node.nodeType == 3) { //テキストの場合\n                var text = node.textContent.replace(/\\r?\\n/g, ''); //テキストから改行コード削除\n                //spanで囲んで連結\n                spanWrapText = spanWrapText + text.split('').reduce(function (acc, v) {\n                    _this.count++;\n                    var spanStyles = '';\n                    for (var i in _this.yugos) {\n                        if (v == _this.yugos[i]) {\n                            spanStyles = _this.styleClassYugo;\n                        }\n                    }\n                    return acc + (\"<span class=\\\"\" + spanStyles + \"\\\" style=\\\"transition-delay: \" + _this.count * _this.ms + \"ms;\\\">\" + v + \"</span>\");\n                }, \"\");\n            }\n            else { //テキスト以外\n                //<br>などテキスト以外の要素をそのまま連結\n                spanWrapText = spanWrapText + node.outerHTML;\n            }\n        });\n        this.target.innerHTML = spanWrapText;\n    };\n    return SpanWrap;\n}());\n\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/_span_wrap.ts?");
-
-/***/ }),
-
-/***/ "./src/js/home/_text_anim.ts":
-/*!***********************************!*\
-  !*** ./src/js/home/_text_anim.ts ***!
-  \***********************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _span_wrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_span_wrap */ \"./src/js/home/_span_wrap.ts\");\n;\nvar TextAnim = function () {\n    var targetTextsElms = document.querySelectorAll('.text-anim');\n    for (var i = 0; i < targetTextsElms.length; i++) {\n        var target = targetTextsElms[i];\n        var yugos = target.dataset.yugos;\n        var ms = target.dataset.ms;\n        new _span_wrap__WEBPACK_IMPORTED_MODULE_0__.SpanWrap(target, yugos, ms);\n    }\n    /*\n    スクロールイベント\n    */\n    window.addEventListener('scroll', function (e) {\n        var winH = window.innerHeight;\n        var inY = winH * 0.3;\n        var textAnimElms = document.querySelectorAll('.text-anim.scroll-trigger');\n        for (var i = 0; i < textAnimElms.length; i++) {\n            var elm = textAnimElms[i];\n            var pos = elm.getBoundingClientRect().top - winH;\n            if (pos + inY < 0) {\n                elm.classList.add('scroll-in');\n            }\n        }\n        ;\n    });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (TextAnim);\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/_text_anim.ts?");
-
-/***/ }),
-
 /***/ "./src/js/home/main.ts":
 /*!*****************************!*\
   !*** ./src/js/home/main.ts ***!
@@ -1273,7 +1217,21 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _spa
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_about */ \"./src/js/home/_about.ts\");\n/* harmony import */ var _elm_anim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_elm_anim */ \"./src/js/home/_elm_anim.ts\");\n/* harmony import */ var _kv__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_kv */ \"./src/js/home/_kv.ts\");\n/* harmony import */ var _text_anim__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_text_anim */ \"./src/js/home/_text_anim.ts\");\n;\n\n\n\n(0,_text_anim__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_elm_anim__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_kv__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_about__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/main.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_about */ \"./src/js/home/_about.ts\");\n/* harmony import */ var _modules_kv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/_kv */ \"./src/js/modules/_kv.ts\");\n;\n\n(0,_modules_kv__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_about__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/home/main.ts?");
+
+/***/ }),
+
+/***/ "./src/js/modules/_kv.ts":
+/*!*******************************!*\
+  !*** ./src/js/modules/_kv.ts ***!
+  \*******************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nvar Kv = function () {\n    window.addEventListener('load', function (e) {\n        var top = document.getElementById('top');\n        var mainTxt = document.getElementById('topMainTxt');\n        var mainTxtJa = document.getElementById('topMainTxtJa');\n        var medic = document.querySelector('#top .deco-medic');\n        var est = document.querySelector('#top .deco-est');\n        var cprl = document.querySelector('#top .deco-cprl');\n        var info = document.querySelector('#top .deco-info');\n        setTimeout(function () {\n            top.classList.add('show');\n            setTimeout(function () {\n                if (mainTxt)\n                    mainTxt.classList.add('show');\n            }, 100);\n            setTimeout(function () {\n                if (mainTxtJa)\n                    mainTxtJa.classList.add('show');\n            }, 100);\n            setTimeout(function () {\n                if (medic)\n                    medic.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (medic)\n                    medic.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (est)\n                    est.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (cprl)\n                    cprl.classList.add('show');\n            }, 1500);\n            setTimeout(function () {\n                if (info)\n                    info.classList.add('show');\n            }, 1500);\n        }, 500);\n    });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Kv);\n\n\n//# sourceURL=webpack://vue-ts-temp/./src/js/modules/_kv.ts?");
 
 /***/ })
 

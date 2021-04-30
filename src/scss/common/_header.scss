@@ -110,16 +110,17 @@ SMALL
                   .nav-txt{
                     font-family: 'Cormorant', serif;
                     font-size: 38px;
+                    line-height: 1em;
                     letter-spacing: 0.1em;
                     display: inline-block;
                     position: relative;
                     &::after{
                       content:"";
                       width:100%;
-                      height: 1px;
+                      height: 0.5px;
                       background-color: #2b2f34;
                       position: absolute;
-                      bottom:10px;
+                      bottom:7px;
                       left:0;
                     }
                   }
@@ -285,7 +286,9 @@ LARGE
                 }
               }
             }
-            &.active{
+            .page-home &.gl-nav-top,
+            .page-about &.gl-nav-about,
+            .page-service &.gl-nav-service{
               a{
                 .nav-txt{
                   &::after{

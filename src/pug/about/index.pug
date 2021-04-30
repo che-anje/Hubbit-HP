@@ -2,7 +2,7 @@ extends ../_component/_layout
 
 block title
 
-  title ABOUT | Hubbit,inc
+  title 私たちについて | Hubbit,inc
 
 block description
 
@@ -14,9 +14,13 @@ block ogp
   meta(property="og:site_name",content="Hubbit,inc")
   meta(property="og:type",content="website")
   meta(property="og:url",content="https://www.hubbit.io/about/")
-  meta(property="og:title",content="ABOUT | Hubbit,inc")
-  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.png")
+  meta(property="og:title",content="私たちについて | Hubbit,inc")
+  meta(property="og:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
   meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:card",content="summary_large_image")
+  meta(name="twitter:title",content="私たちについて| Hubbit,inc")
+  meta(name="twitter:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
 
 block seo
 
@@ -27,8 +31,9 @@ block linkfiles
   link(rel="stylesheet",href="/assets/css/common/common.css",media="all")
   link(rel="stylesheet",href="/assets/css/about/index.css",media="all")
   script(defer,src="/assets/js/common/common.js")
-  //script(defer,src="/assets/js/about/main.js")
+  script(defer,src="/assets/js/about/main.js")
 
+  - var bodyClass=['page-about'];
 block body
 
   .bg-gradation
@@ -45,8 +50,10 @@ block body
         section.top#top
           //default size 938 397
           p.main-txt#topMainTxt
-            img(src="/assets/images/about/top/about.png", alt="")
-          h1.main-txt-ja#topMainTxtJa
+            picture
+              source(media=pic_media,srcset="/assets/images/about/top/about.png")
+              img(src="/assets/images/about/top/about-sp.png", alt="about")
+          h1.main-txt-ja#topMainTxtJa.text-anim
             |私たちについて
           p.copyright.font-corm-400
             |Copyright(C) Hubbit,inc All rights reserved
@@ -65,32 +72,37 @@ block body
               |last stage support / Seminar
           .deco.deco-info
             .font-corm-400.uppercase.text-anim(data-ms='150') information technology
-          //.scroll-down
+          .scroll-down
             span.scroll-down-txt.font-corm-600 Scroll down
             .arrow
               img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
         
         //MESSAGE
         section.message#message
-          h2.copy-01.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
+          h2.copy-01.copy-01-pc.text-anim.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
+            |“社会をより良くしたいという
+            br
+            |１⼈ひとりの想い(bit)を形にするための組織(Hub)”
+
+          .copy-01.copy-01-sp.text-anim.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
             |“社会をより良くしたいという
             br
             |１⼈ひとりの想い(bit)を
-            br.sp
+            br
             |形にするための組織(Hub)”
 
         //COMPANY
         section.company#company
-          .title
-            h2.title-ja 会社概要
+          .title.animation-up
+            h2.title-ja.text-anim.scroll-trigger 会社概要
             .title-en.font-corm-400 COMPANY
           
-          p.main-txt.font-yugo
+          p.main-txt.font-yugo.animation-up
             |⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、
             br
             |サービス開発を⾏っています。
 
-          .boxes
+          .boxes.animation-up
             .box.box-business
               h3.box-title
                 span.box-title-ja
@@ -144,13 +156,13 @@ block body
                 
         //NEWS
         section.news#news
-          .title
-            h2.title-ja お知らせ
+          .title.animation-right-in
+            h2.title-ja.text-anim.scroll-trigger お知らせ
             .title-en.font-corm-400
               |NEWS
               br
               |RELEASE
-          .news-list
+          .news-list.animation-up
             ul 
               li
                 .news-box
@@ -190,11 +202,11 @@ block body
 
         //MEMBER
         section.member#member
-          .title
-            h2.title-ja メンバー
+          .title.animation-up
+            h2.title-ja.text-anim.scroll-trigger メンバー
             .title-en.font-corm-400 MEMBER
           .boxes
-            .box
+            .box.animation-up
               .box-photo
                 img(src="/assets/images/about/member/photo-usui-kiki.jpg", alt="⾅井 貴紀")
               .box-title
@@ -207,7 +219,7 @@ block body
                 p.box-txt-01.font-yugo
                   |91年⽯川県⽣まれ。早稲⽥⼤学卒業後、ヤフー株式会社に新卒⼊社。営業、マーケティング、新規事業開発を担当。退職後も、新規事業開発に係り、Hubbit株式会社を設⽴。
 
-            .box
+            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
               .box-photo
                 img(src="/assets/images/about/member/photo-kazuta-yoko.jpg", alt="数⽥ 陽⼦")
               .box-title
@@ -220,7 +232,7 @@ block body
                 p.box-txt-01.font-yugo
                   |⼤阪府⽣まれ。介護⽤品まで⼿掛ける健康器具開発メーカーでMDと営業を経験。その後、ECサイト運営企業にて健康⾷品と化粧品の開発・MDに従事。
 
-            .box
+            .box.animation-up.anim-delay-pc-02
               .box-photo
                 img(src="/assets/images/about/member/photo-sumi-yukiyo.jpg", alt="鷲⾒ 幸代")
               .box-title
@@ -233,7 +245,7 @@ block body
                 p.box-txt-01.font-yugo
                   |岐⾩県⽣まれ。不動産会社にてホステル⽴ち上げ業務と運営マネジメントを⾏ったのち、スペースの新規⽴ち上げ業務とコミュニティイベント企画・運営を⾏なっている。
 
-            .box
+            .box.animation-up.anim-delay-sp-01
               .box-photo
                 img(src="/assets/images/about/member/photo-hattori-eiji.jpg", alt="服部 英志")
               .box-title
@@ -246,7 +258,7 @@ block body
                 p.box-txt-01.font-yugo
                   |東京都⽣まれ。早稲⽥⼤学卒業後、⼤⼿営業代理店に所属しパートナー営業に従事した後、スタートアップにて新規開拓営業を数社経験し、現在に⾄る。
 
-            .box
+            .box.animation-up.anim-delay-pc-01
               .box-photo
                 img(src="/assets/images/about/member/photo-nakafuji-kyohei.jpg", alt="中藤 恭平")
               .box-title
@@ -259,7 +271,7 @@ block body
                 p.box-txt-01.font-yugo
                   |千葉県⽣まれ。東京理科⼤学卒業後、某証券会社に⼊社し基幹システムを担当。その後、⾦融系のシステム開発に従事したのち、独⽴。Hubbit株式会社にCTOとして参画。
 
-            .box
+            .box.animation-up.anim-delay-sp-01.anim-delay-pc-02
               .box-photo
                 img(src="/assets/images/about/member/photo-che-anje.jpg", alt="崔 央載")
               .box-title
@@ -272,7 +284,7 @@ block body
                 p.box-txt-01.font-yugo
                   |96年⽣まれ。名古屋出⾝。トヨタの⼦会社で社会⼈デビューしたのち、エンジニアになろうと奮起し、退社独学後、Hubbit株式会社に⼊社。
 
-            .box
+            .box.animation-up
               .box-photo
                 img(src="/assets/images/about/member/photo-kosuda-reika.jpg", alt="⼩須⽥ 玲花")
               .box-title
@@ -285,7 +297,7 @@ block body
                 p.box-txt-01.font-yugo
                   |群⾺県⽣まれ。千葉⼤学⼤学院に在学中。研究室では機械学習を⽤いた医⽤画像処理に関するに研究を⾏っています。2020年6⽉にインターン⽣として参画。
 
-            .box
+            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
               .box-photo
                 img(src="/assets/images/about/member/photo-oku-haruki.jpg", alt="奥 春樹")
               .box-title
@@ -300,11 +312,11 @@ block body
 
         //ADVISER
         section.member#adviser
-          .title
-            h2.title-ja 顧問
+          .title.animation-up
+            h2.title-ja.text-anim.scroll-trigger 顧問
             .title-en.font-corm-400 ADVISER
           .boxes
-            .box
+            .box.animation-up
               .box-photo
                 img(src="/assets/images/about/adviser/photo-kimura-hiroaki.jpg", alt="木村 浩彰")
               .box-title
@@ -320,7 +332,7 @@ block body
                 br
                 span.name-en.font-corm-400 Kimura Hiroaki
 
-            .box
+            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
               .box-photo
                 img(src="/assets/images/about/adviser/photo-bessho-naoya.jpg", alt="別所 直哉")
               .box-title
@@ -338,7 +350,7 @@ block body
                 p.box-txt-01.font-yugo
                   |1999年にヤフー株式会社入社。法務部長、法務本部長、執行役員（法務、広報、政策企画、公共サービス、リスクマネジメント管掌）を経て2018年４月よりシニアアドバイザー、紀尾井町戦略研究所株式会社理事長。一般社団法人日本IT団体連盟理事。立教大学大学院21世紀社会デザイン研究科兼任講師も務める。
 
-            .box
+            .box.animation-up.anim-delay-pc-02
               .box-photo
                 img(src="/assets/images/about/adviser/photo-shirakawa-touko.jpg", alt="白河 桃子")
               .box-title
@@ -353,7 +365,7 @@ block body
                 p.box-txt-01.font-yugo
                   |昭和女子大学客員教授、相模女子大学大学院 特任教授、東京大学 大学院情報学環客員研究員。女性のライフキャリア、ワークライフバランス、少子化、働き方改革、ダイバーシティなどをテーマとする。内閣府男女局「男女共同参画会議　重点方針専門調査会」専門委員、内閣官房「働き方改革実現会議」有識者議員など活躍多数。
 
-            .box
+            .box.animation-up.anim-delay-sp-01
               .box-photo
                 img(src="/assets/images/about/adviser/photo-blank.jpg", alt="")
               .box-title
@@ -383,17 +395,6 @@ block body
 
         //CONTACT
         section.contact#contact
-          h2.title-ja.text-anim.scroll-trigger
-            |お問い合わせ
-          .title-en.font-corm-400.animation-up
-            |CONTACT
-          .animation-up
-            p.copy-01
-              |お問い合わせ、ご要望がございましたら、
-              br.sp
-              |こちらからご連絡ください。
-            a.round-btn-arrow.btn-color-black(href='/contact/')
-              span.font-corm-600 CONTACT
 
       //FOOTER
       section#footer.footer

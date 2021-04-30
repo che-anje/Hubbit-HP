@@ -1,0 +1,126 @@
+/************************************************************
+COMMON
+*************************************************************/
+
+section.term{
+  a{
+    text-decoration: underline;
+  }
+}
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.term{
+    width:74vw;
+    margin:45px auto 0;
+    font-size: 13px;
+    line-height: 2.23em;
+    ul{
+      padding:0;
+      margin-left:18px;
+      li{
+        
+      }
+    }
+    ol{
+      padding:0;
+      margin-left:17px;
+      li{
+        padding-top:55px;
+        margin-top:-55px;
+        ul{
+          margin-left:18px;
+          list-style: disc;
+        }
+      }
+    }
+    nav{
+      ol{
+        padding:0;
+        margin-left:30px;
+        margin-top:0;
+      }
+    }
+    .top-txt{
+
+    }
+    .term-sec{
+      padding-top:55px;
+      margin-top:-20px;
+    }
+    .title-01{
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: normal;
+      padding-bottom:5px;
+    }
+    .date{
+      margin-top:20px;
+      text-align: right;
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.term{
+    width:830px;
+    margin:180px auto 0;
+    font-size: 16px;
+    line-height: 2.25em;
+    ul{
+      padding:0;
+      margin-left:40px;
+      li{
+        ul{
+          margin-left:20px;
+        }
+      }
+    }
+    ol{
+      padding:0;
+      margin-left:45px;
+      li{
+        padding-top:100px;
+        margin-top:-100px;
+        ul{
+          margin-left:20px;
+          list-style: disc;
+        }
+      }
+    }
+    nav{
+      ol{
+        margin-left:60px;
+      }
+    }
+    .top-txt{
+
+    }
+    .term-sec{
+      padding-top:100px;
+      margin-top:-55px;
+    }
+    .title-01{
+      font-size: 20px;
+      line-height: 1.8em;
+      font-weight: normal;
+      padding-bottom:5px;
+    }
+    .txt-01{
+      margin-left:20px;
+    }
+    .date{
+      margin-top:35px;
+      text-align: right;
+    }
+  }
+}

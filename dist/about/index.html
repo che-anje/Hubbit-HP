@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width">
-    <title>ABOUT | Hubbit,inc</title>
+    <title>私たちについて | Hubbit,inc</title>
     <meta name="description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="Hubbit,inc">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hubbit.io/about/">
-    <meta property="og:title" content="ABOUT | Hubbit,inc">
-    <meta property="og:image" content="https://www.hubbit.io/assets/images/ogp.png">
+    <meta property="og:title" content="私たちについて | Hubbit,inc">
+    <meta property="og:image" content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png">
     <meta property="og:description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="私たちについて| Hubbit,inc">
+    <meta name="twitter:description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png">
     <link rel="canonical" href="https://www.hubbit.io/about/">
     <link rel="stylesheet" href="/assets/css/common/common.css" media="all">
     <link rel="stylesheet" href="/assets/css/about/index.css" media="all">
     <script defer src="/assets/js/common/common.js"></script>
-    <!--script(defer,src="/assets/js/about/main.js")-->
+    <script defer src="/assets/js/about/main.js"></script>
     <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?606c1ad49ca44f29bded6c52ac1e02e5" charset="utf-8"></script>
   </head>
-  <body>
+  <body class="page-about">
     <div class="bg-gradation"></div>
     <div class="contents-wrapper">
       <!--HEADER-->
@@ -30,8 +34,12 @@
           <!--TOP-->
           <section class="top" id="top">
             <!--default size 938 397-->
-            <p class="main-txt" id="topMainTxt"><img src="/assets/images/about/top/about.png" alt=""></p>
-            <h1 class="main-txt-ja" id="topMainTxtJa">私たちについて</h1>
+            <p class="main-txt" id="topMainTxt">
+              <picture>
+                <source media="(min-width:760px)" srcset="/assets/images/about/top/about.png"><img src="/assets/images/about/top/about-sp.png" alt="about">
+              </picture>
+            </p>
+            <h1 class="main-txt-ja text-anim" id="topMainTxtJa">私たちについて</h1>
             <p class="copyright font-corm-400">Copyright(C) Hubbit,inc All rights reserved</p>
             <div class="deco deco-medic">
               <div class="font-corm-600 uppercase text-anim" data-ms="100">Medical care application</div>
@@ -45,25 +53,23 @@
             <div class="deco deco-info">
               <div class="font-corm-400 uppercase text-anim" data-ms="150">information technology</div>
             </div>
-            <!--.scroll-down
-            span.scroll-down-txt.font-corm-600 Scroll down
-            .arrow
-              img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
-            
-            -->
+            <div class="scroll-down"><span class="scroll-down-txt font-corm-600">Scroll down</span>
+              <div class="arrow"><img src="/assets/images/common/scroll-down-arrow.svg" alt="scroll down"></div>
+            </div>
           </section>
           <!--MESSAGE-->
           <section class="message" id="message">
-            <h2 class="copy-01 scroll-trigger" data-yugos="[&quot;社&quot;,&quot;会&quot;,&quot;良&quot;,&quot;⼈&quot;,&quot;想&quot;,&quot;形&quot;,&quot;組&quot;,&quot;織&quot;]" data-ms="75">“社会をより良くしたいという<br>１⼈ひとりの想い(bit)を<br class="sp">形にするための組織(Hub)”</h2>
+            <h2 class="copy-01 copy-01-pc text-anim scroll-trigger" data-yugos="[&quot;社&quot;,&quot;会&quot;,&quot;良&quot;,&quot;⼈&quot;,&quot;想&quot;,&quot;形&quot;,&quot;組&quot;,&quot;織&quot;]" data-ms="75">“社会をより良くしたいという<br>１⼈ひとりの想い(bit)を形にするための組織(Hub)”</h2>
+            <div class="copy-01 copy-01-sp text-anim scroll-trigger" data-yugos="[&quot;社&quot;,&quot;会&quot;,&quot;良&quot;,&quot;⼈&quot;,&quot;想&quot;,&quot;形&quot;,&quot;組&quot;,&quot;織&quot;]" data-ms="75">“社会をより良くしたいという<br>１⼈ひとりの想い(bit)を<br>形にするための組織(Hub)”</div>
           </section>
           <!--COMPANY-->
           <section class="company" id="company">
-            <div class="title">
-              <h2 class="title-ja">会社概要</h2>
+            <div class="title animation-up">
+              <h2 class="title-ja text-anim scroll-trigger">会社概要</h2>
               <div class="title-en font-corm-400">COMPANY</div>
             </div>
-            <p class="main-txt font-yugo">⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、<br>サービス開発を⾏っています。</p>
-            <div class="boxes">
+            <p class="main-txt font-yugo animation-up">⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、<br>サービス開発を⾏っています。</p>
+            <div class="boxes animation-up">
               <div class="box box-business">
                 <h3 class="box-title"><span class="box-title-ja">事業内容&nbsp;/&nbsp;</span><span class="box-title-en font-corm-600">BUSINESS</span></h3>
                 <div class="box-body">
@@ -100,11 +106,11 @@
           </section>
           <!--NEWS-->
           <section class="news" id="news">
-            <div class="title">
-              <h2 class="title-ja">お知らせ</h2>
+            <div class="title animation-right-in">
+              <h2 class="title-ja text-anim scroll-trigger">お知らせ</h2>
               <div class="title-en font-corm-400">NEWS<br>RELEASE</div>
             </div>
-            <div class="news-list">
+            <div class="news-list animation-up">
               <ul> 
                 <li>
                   <div class="news-box">
@@ -151,12 +157,12 @@
           </section>
           <!--MEMBER-->
           <section class="member" id="member">
-            <div class="title">
-              <h2 class="title-ja">メンバー</h2>
+            <div class="title animation-up">
+              <h2 class="title-ja text-anim scroll-trigger">メンバー</h2>
               <div class="title-en font-corm-400">MEMBER</div>
             </div>
             <div class="boxes">
-              <div class="box">
+              <div class="box animation-up">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-usui-kiki.jpg" alt="⾅井 貴紀"></div>
                 <div class="box-title"><span class="font-yugo">[代表]</span></div>
                 <div class="box-name"><span class="name-ja">⾅井 貴紀</span><br><span class="name-en font-corm-400">Usui Kiki</span></div>
@@ -164,7 +170,7 @@
                   <p class="box-txt-01 font-yugo">91年⽯川県⽣まれ。早稲⽥⼤学卒業後、ヤフー株式会社に新卒⼊社。営業、マーケティング、新規事業開発を担当。退職後も、新規事業開発に係り、Hubbit株式会社を設⽴。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01 anim-delay-pc-01">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-kazuta-yoko.jpg" alt="数⽥ 陽⼦"></div>
                 <div class="box-title"><span class="font-yugo">[ディレクター]</span></div>
                 <div class="box-name"><span class="name-ja">数⽥ 陽⼦</span><br><span class="name-en font-corm-400">Kazuta Yoko</span></div>
@@ -172,7 +178,7 @@
                   <p class="box-txt-01 font-yugo">⼤阪府⽣まれ。介護⽤品まで⼿掛ける健康器具開発メーカーでMDと営業を経験。その後、ECサイト運営企業にて健康⾷品と化粧品の開発・MDに従事。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-pc-02">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-sumi-yukiyo.jpg" alt="鷲⾒ 幸代"></div>
                 <div class="box-title"><span class="font-yugo">[ディレクター]</span></div>
                 <div class="box-name"><span class="name-ja">鷲⾒ 幸代</span><br><span class="name-en font-corm-400">Sumi Yukiyo</span></div>
@@ -180,7 +186,7 @@
                   <p class="box-txt-01 font-yugo">岐⾩県⽣まれ。不動産会社にてホステル⽴ち上げ業務と運営マネジメントを⾏ったのち、スペースの新規⽴ち上げ業務とコミュニティイベント企画・運営を⾏なっている。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-hattori-eiji.jpg" alt="服部 英志"></div>
                 <div class="box-title"><span class="font-yugo">[マーケター]</span></div>
                 <div class="box-name"><span class="name-ja">服部 英志</span><br><span class="name-en font-corm-400">Hattori Eiji</span></div>
@@ -188,7 +194,7 @@
                   <p class="box-txt-01 font-yugo">東京都⽣まれ。早稲⽥⼤学卒業後、⼤⼿営業代理店に所属しパートナー営業に従事した後、スタートアップにて新規開拓営業を数社経験し、現在に⾄る。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-pc-01">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-nakafuji-kyohei.jpg" alt="中藤 恭平"></div>
                 <div class="box-title"><span class="font-yugo">[エンジニア]</span></div>
                 <div class="box-name"><span class="name-ja">中藤 恭平</span><br><span class="name-en font-corm-400">Nakafuji Kyohei</span></div>
@@ -196,7 +202,7 @@
                   <p class="box-txt-01 font-yugo">千葉県⽣まれ。東京理科⼤学卒業後、某証券会社に⼊社し基幹システムを担当。その後、⾦融系のシステム開発に従事したのち、独⽴。Hubbit株式会社にCTOとして参画。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01 anim-delay-pc-02">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-che-anje.jpg" alt="崔 央載"></div>
                 <div class="box-title"><span class="font-yugo">[エンジニア]</span></div>
                 <div class="box-name"><span class="name-ja">崔 央載</span><br><span class="name-en font-corm-400">Che Anje</span></div>
@@ -204,7 +210,7 @@
                   <p class="box-txt-01 font-yugo">96年⽣まれ。名古屋出⾝。トヨタの⼦会社で社会⼈デビューしたのち、エンジニアになろうと奮起し、退社独学後、Hubbit株式会社に⼊社。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-kosuda-reika.jpg" alt="⼩須⽥ 玲花"></div>
                 <div class="box-title"><span class="font-yugo">[エンジニア]</span></div>
                 <div class="box-name"><span class="name-ja">⼩須⽥ 玲花</span><br><span class="name-en font-corm-400">Kosuda Reika</span></div>
@@ -212,7 +218,7 @@
                   <p class="box-txt-01 font-yugo">群⾺県⽣まれ。千葉⼤学⼤学院に在学中。研究室では機械学習を⽤いた医⽤画像処理に関するに研究を⾏っています。2020年6⽉にインターン⽣として参画。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01 anim-delay-pc-01">
                 <div class="box-photo"><img src="/assets/images/about/member/photo-oku-haruki.jpg" alt="奥 春樹"></div>
                 <div class="box-title"><span class="font-yugo">[デザイナー]</span></div>
                 <div class="box-name"><span class="name-ja">奥 春樹</span><br><span class="name-en font-corm-400">Oku Haruki</span></div>
@@ -224,18 +230,18 @@
           </section>
           <!--ADVISER-->
           <section class="member" id="adviser">
-            <div class="title">
-              <h2 class="title-ja">顧問</h2>
+            <div class="title animation-up">
+              <h2 class="title-ja text-anim scroll-trigger">顧問</h2>
               <div class="title-en font-corm-400">ADVISER</div>
             </div>
             <div class="boxes">
-              <div class="box">
+              <div class="box animation-up">
                 <div class="box-photo"><img src="/assets/images/about/adviser/photo-kimura-hiroaki.jpg" alt="木村 浩彰"></div>
                 <div class="box-title"><span class="font-yugo">[データ研究協力]</span></div>
                 <div class="box-position">広島大学病院<br class="sp">リハビリテーション科科長 <br class="sp">教授</div>
                 <div class="box-name"><span class="name-ja">木村 浩彰</span><br><span class="name-en font-corm-400">Kimura Hiroaki</span></div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01 anim-delay-pc-01">
                 <div class="box-photo"><img src="/assets/images/about/adviser/photo-bessho-naoya.jpg" alt="別所 直哉"></div>
                 <div class="box-title"><span class="font-yugo">[アドバイザー]</span></div>
                 <div class="box-position">紀尾井町戦略研究所株式会社 <br class="sp">代表取締役社長</div>
@@ -244,7 +250,7 @@
                   <p class="box-txt-01 font-yugo">1999年にヤフー株式会社入社。法務部長、法務本部長、執行役員（法務、広報、政策企画、公共サービス、リスクマネジメント管掌）を経て2018年４月よりシニアアドバイザー、紀尾井町戦略研究所株式会社理事長。一般社団法人日本IT団体連盟理事。立教大学大学院21世紀社会デザイン研究科兼任講師も務める。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-pc-02">
                 <div class="box-photo"><img src="/assets/images/about/adviser/photo-shirakawa-touko.jpg" alt="白河 桃子"></div>
                 <div class="box-title"><span class="font-yugo">[アドバイザー]</span></div>
                 <div class="box-position">少子化ジャーナリスト</div>
@@ -253,7 +259,7 @@
                   <p class="box-txt-01 font-yugo">昭和女子大学客員教授、相模女子大学大学院 特任教授、東京大学 大学院情報学環客員研究員。女性のライフキャリア、ワークライフバランス、少子化、働き方改革、ダイバーシティなどをテーマとする。内閣府男女局「男女共同参画会議　重点方針専門調査会」専門委員、内閣官房「働き方改革実現会議」有識者議員など活躍多数。</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="box animation-up anim-delay-sp-01">
                 <div class="box-photo"><img src="/assets/images/about/adviser/photo-blank.jpg" alt=""></div>
                 <div class="box-title"><span class="font-yugo">[研究会]</span></div>
                 <div class="box-name"><span class="name-ja">◯◯◯◯◯◯</span><br><span class="name-en font-corm-400">xxxxxxxxxx</span></div>
@@ -270,18 +276,12 @@
             <p class="copy-01 text-anim scroll-trigger" data-yugos="[&quot;⼀&quot;,&quot;緒&quot;,&quot;未&quot;,&quot;来&quot;,&quot;創&quot;,&quot;仲&quot;,&quot;間&quot;,&quot;募&quot;,&quot;集&quot;]" data-ms="75">“Hubbitは、<br class="sp">⼀緒に未来を創っていく”<br>仲間を募集しています。</p><a class="round-btn-arrow" href="/recruit/"><span class="font-corm-600">VIEW MORE</span></a>
           </section>
           <!--CONTACT-->
-          <section class="contact" id="contact">
-            <h2 class="title-ja text-anim scroll-trigger">お問い合わせ</h2>
-            <div class="title-en font-corm-400 animation-up">CONTACT</div>
-            <div class="animation-up">
-              <p class="copy-01">お問い合わせ、ご要望がございましたら、<br class="sp">こちらからご連絡ください。</p><a class="round-btn-arrow btn-color-black" href="/contact/"><span class="font-corm-600">CONTACT</span></a>
-            </div>
-          </section>
+          <section class="contact" id="contact"></section>
         </main>
         <!--FOOTER-->
         <section class="footer" id="footer"></section>
       </div>
     </div>
-    <div class="webfont-chars font-yugo">利⽤規約プライバシーポリシー〒141-0001 東京都品川区北品川5-5-15TEL : 050-5850-2698</div>
+    <div class="webfont-chars font-yugo">利⽤規約プライバシーポリシー〒141-0001 東京都品川区北品川5-5-15TEL : 050-5850-2698お問い合わせお問い合わせ、ご要望がございましたら、こちらからご連絡ください。</div>
   </body>
 </html>

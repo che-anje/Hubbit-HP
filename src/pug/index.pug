@@ -15,8 +15,12 @@ block ogp
   meta(property="og:type",content="website")
   meta(property="og:url",content="https://www.hubbit.io/")
   meta(property="og:title",content="TOP | Hubbit,inc")
-  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.png")
+  meta(property="og:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
   meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:card",content="summary_large_image")
+  meta(name="twitter:title",content="TOP | Hubbit,inc")
+  meta(name="twitter:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
 
 block seo
 
@@ -29,6 +33,7 @@ block linkfiles
   script(defer,src="/assets/js/common/common.js")
   script(defer,src="/assets/js/home/main.js")
 
+  - var bodyClass=['page-home'];
 block body
 
   .bg-gradation
@@ -44,9 +49,9 @@ block body
         //TOP
         section.top#top
           //default size 938 397
-          p.main-txt#topMainTxt
+          //p.main-txt#topMainTxt
             img(src="/assets/images/home/top/death-data.png", alt="")
-          //p.main-txt#topMainTxt.
+          p.main-txt#topMainTxt.
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 938 450">
               <g class="char char-01">
                 <path d="M60.029,166.631 L0.114,166.631 L0.966,165.055 L11.188,164.004 C21.127,163.216 24.818,161.640 24.818,160.064 L24.818,8.230 C24.818,6.391 23.114,5.866 8.349,4.815 L1.250,4.027 L0.398,2.451 L68.264,1.663 C129.315,1.663 166.798,31.872 166.798,80.994 C166.798,132.744 124.204,166.631 60.029,166.631 ZM64.005,4.815 L43.276,4.815 L43.276,160.326 L66.844,163.741 C121.080,162.953 146.921,126.439 146.921,87.036 C146.921,39.752 119.661,4.815 64.005,4.815 Z"/>
@@ -205,17 +210,7 @@ block body
             
         //CONTACT
         section.contact#contact
-          h2.title-ja.text-anim.scroll-trigger
-            |お問い合わせ
-          .title-en.font-corm-400.animation-up
-            |CONTACT
-          .animation-up
-            p.copy-01
-              |お問い合わせ、ご要望がございましたら、
-              br.sp
-              |こちらからご連絡ください。
-            a.round-btn-arrow.btn-color-black(href='/contact/')
-              span.font-corm-600 CONTACT
+          
 
       //FOOTER
       section#footer.footer

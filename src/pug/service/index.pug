@@ -2,7 +2,7 @@ extends ../_component/_layout
 
 block title
 
-  title SERVICE | Hubbit,inc
+  title サービス内容 | Hubbit,inc
 
 block description
 
@@ -14,9 +14,13 @@ block ogp
   meta(property="og:site_name",content="Hubbit,inc")
   meta(property="og:type",content="website")
   meta(property="og:url",content="https://www.hubbit.io/service/")
-  meta(property="og:title",content="SERVICE | Hubbit,inc")
-  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.png")
+  meta(property="og:title",content="サービス内容 | Hubbit,inc")
+  meta(property="og:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
   meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:card",content="summary_large_image")
+  meta(name="twitter:title",content="サービス内容 | Hubbit,inc")
+  meta(name="twitter:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="twitter:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
 
 block seo
 
@@ -27,8 +31,9 @@ block linkfiles
   link(rel="stylesheet",href="/assets/css/common/common.css",media="all")
   link(rel="stylesheet",href="/assets/css/service/index.css",media="all")
   script(defer,src="/assets/js/common/common.js")
-  //script(defer,src="/assets/js/service/main.js")
+  script(defer,src="/assets/js/service/main.js")
 
+  - var bodyClass=['page-service'];
 block body
 
   .bg-gradation
@@ -45,8 +50,10 @@ block body
         section.top#top
           //default size 938 397
           p.main-txt#topMainTxt
-            img(src="/assets/images/service/top/service.png", alt="")
-          h1.main-txt-ja#topMainTxtJa
+            picture
+              source(media=pic_media,srcset="/assets/images/service/top/service.png")
+              img(src="/assets/images/service/top/service-sp.png", alt="service")
+          h1.main-txt-ja#topMainTxtJa.text-anim
             |サービス内容
           p.copyright.font-corm-400
             |Copyright(C) Hubbit,inc All rights reserved
@@ -65,24 +72,31 @@ block body
               |last stage support / Seminar
           .deco.deco-info
             .font-corm-400.uppercase.text-anim(data-ms='150') information technology
-          //.scroll-down
+          .scroll-down
             span.scroll-down-txt.font-corm-600 Scroll down
             .arrow
               img(src="/assets/images/common/scroll-down-arrow.svg", alt="scroll down")
         
         //MESSAGE
         section.message#message
-          h2.copy-01.scroll-trigger(data-yugos='["社","会","良","⼈","想","形","組","織"]',data-ms='75')
+          h2.copy-01.copy-01-pc.scroll-trigger.text-anim(data-yugos='["社","会","良","⽬","指","⼈","々","抱","課","題","向","合","⽇","常","無","創","出"]',data-ms='75')
+            |“Hubbitはより良い社会を⽬指し、
+            br
+            |⼈々が抱える課題に１つひとつ向き合って
+            br
+            |⽇常に無くてはならないサービスを創り出します。”
+
+          .copy-01.copy-01-sp.scroll-trigger.text-anim(data-yugos='["社","会","良","⽬","指","⼈","々","抱","課","題","向","合","⽇","常","無","創","出"]',data-ms='75')
             |“Hubbitは
-            br.sp
+            br
             |より良い社会を⽬指し、
             br
             |⼈々が抱える課題に
-            br.sp
+            br
             |１つひとつ向き合って
             br
             |⽇常に無くてはならない
-            br.sp
+            br
             |サービスを創り出します。”
 
         //SERVICES01
@@ -91,7 +105,7 @@ block body
             .service-img
               img(src="/assets/images/service/services/tablet.png", alt="タブレット")
             .service-box-txts
-              .service-box-txts-inner
+              .service-box-txts-inner.animation-left-in
                 .service-num
                   img(src="/assets/images/service/services/service-num-01.png", alt="service 01")
                 h3.service-txt-01
@@ -111,7 +125,7 @@ block body
             .service-img
               img(src="/assets/images/service/services/golden-years.png", alt="golden years")
             .service-box-txts
-              .service-box-txts-inner
+              .service-box-txts-inner.animation-right-in
                 .service-num
                   img(src="/assets/images/service/services/service-num-02.png", alt="service 02")
                 h3.service-txt-01
@@ -127,7 +141,7 @@ block body
             .service-img
               img(src="/assets/images/service/services/my-list-100.png", alt="MY LIST 100")
             .service-box-txts
-              .service-box-txts-inner
+              .service-box-txts-inner.animation-left-in
                 .service-num
                   img(src="/assets/images/service/services/service-num-03.png", alt="service 03")
                 h3.service-txt-01
@@ -139,17 +153,6 @@ block body
 
         //CONTACT
         section.contact#contact
-          h2.title-ja.text-anim.scroll-trigger
-            |お問い合わせ
-          .title-en.font-corm-400.animation-up
-            |CONTACT
-          .animation-up
-            p.copy-01
-              |お問い合わせ、ご要望がございましたら、
-              br.sp
-              |こちらからご連絡ください。
-            a.round-btn-arrow.btn-color-black(href='/contact/')
-              span.font-corm-600 CONTACT
 
       //FOOTER
       section#footer.footer

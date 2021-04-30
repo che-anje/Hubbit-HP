@@ -1,0 +1,80 @@
+/************************************************************
+COMMON
+*************************************************************/
+
+section.policy{
+  a{
+    text-decoration: underline;
+  }
+}
+
+/************************************************************
+SMALL
+*************************************************************/
+
+@media #{$small}{
+
+  section.policy{
+    width:74vw;
+    margin:45px auto 0;
+    font-size: 13px;
+    line-height: 2.23em;
+    ul{
+      margin-left:18px;
+      li{
+        
+      }
+    }
+    .top-txt{
+
+    }
+    .policy-sec{
+      padding-top:55px;
+      margin-top:-20px;
+    }
+    .title-01{
+      font-size: 18px;
+      line-height: 1.6em;
+      font-weight: normal;
+      padding-bottom:5px;
+    }
+  }
+}
+
+/************************************************************
+LARGE
+*************************************************************/
+
+@media #{$large}{
+
+  section.policy{
+    width:830px;
+    margin:180px auto 0;
+    font-size: 16px;
+    line-height: 2.25em;
+    ul{
+      margin-left:40px;
+      li{
+        ul{
+          margin-left:20px;
+        }
+      }
+    }
+    .top-txt{
+
+    }
+    .policy-sec{
+      padding-top:100px;
+      margin-top:-55px;
+    }
+    .title-01{
+      font-size: 20px;
+      line-height: 1.8em;
+      font-weight: normal;
+      padding-bottom:5px;
+    }
+    .txt-01{
+      margin-left:20px;
+    }
+  }
+}

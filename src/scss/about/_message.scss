@@ -20,6 +20,9 @@ SMALL
       line-height: 3.16em;
       text-align: center;
       transform:translateX(0.25em);
+      &.copy-01-pc{
+        display: none;
+      }
       /*span:nth-child(1){
         margin-left:-0.5em;
       }
@@ -48,6 +51,9 @@ LARGE
       text-align: center;
       display: inline-block;
       position: relative;
+      &.copy-01-sp{
+        display: none;
+      }
     }
   }
 }
