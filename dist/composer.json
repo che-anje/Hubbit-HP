@@ -1,0 +1,7 @@
+{
+    "require": {
+        "vlucas/valitron": "^1.4",
+        "phpmailer/phpmailer": "^5.2",
+        "twig/twig": "1.34.*"
+    }
+}

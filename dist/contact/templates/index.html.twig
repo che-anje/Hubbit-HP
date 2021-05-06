@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
+    <title>お問い合わせ | Hubbit,inc</title>
+    <meta name="description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Hubbit,inc">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hubbit.io/contact/">
+    <meta property="og:title" content="お問い合わせ | Hubbit,inc">
+    <meta property="og:image" content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png">
+    <meta property="og:description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせ | Hubbit,inc">
+    <meta name="twitter:description" content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。">
+    <meta name="twitter:image" content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png">
+    <link rel="canonical" href="https://www.hubbit.io/contact/">
+    <link rel="stylesheet" href="/assets/css/common/common.css" media="all">
+    <link rel="stylesheet" href="/assets/css/contact/index.css" media="all">
+    <script defer src="/assets/js/common/common.js"></script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?606c1ad49ca44f29bded6c52ac1e02e5" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="bg-gradation"></div>
+    <div class="contents-wrapper">
+      <!--HEADER-->
+      <section class="header" id="header"></section>
+      <div class="slide-contents" id="slideContents">
+        <main>
+          <!--TOP-->
+          <section class="top" id="top">
+            <h1 class="main-txt-ja" id="topMainTxtJa">お問い合わせ</h1>
+            <p class="main-txt" id="topMainTxt">
+              <picture>
+                <source media="(min-width:760px)" srcset="/assets/images/contact/contact.png"><img src="/assets/images/contact/contact-sp.png" alt="contact">
+              </picture>
+            </p>
+            <p class="copyright font-corm-400">Copyright(C) Hubbit,inc All rights reserved</p>
+            <div class="scroll-down"><span class="scroll-down-txt font-corm-600">Scroll down</span>
+              <div class="arrow"><img src="/assets/images/common/scroll-down-arrow.svg" alt="scroll down"></div>
+            </div>
+            <p class="txt-01 font-yugo">お問い合わせは以下よりお願いします。<br>2,3営業日以内にご連絡いたします。</p>
+            <p class="txt-02 font-corm-400">Please contact us bellow.<br>We'll check your message in 3 days.</p>
+          </section>
+          <!--***************FORM***************-->
+          <section class="form" id="form">
+            <form action="" method="post">
+              <div class="form-items">
+                <div class="form-items-row2">
+                  <!--姓 LAST NAME-->
+                  <div class="form-item">
+                    <input type="text" name="lastname" value="{{ post['lastname'] }}" placeholder="姓 / LAST NAME" required>
+                    {{ errors.lastname|join("<br>")|errorMessage|raw }}
+                  </div>
+                  <!--名 FIRST NAME-->
+                  <div class="form-item">
+                    <input type="text" name="firstname" value="{{ post['firstname'] }}" placeholder="名 / FIRST NAME" required>
+                    {{ errors.firstname|join("<br>")|errorMessage|raw }}
+                  </div>
+                </div>
+                <div class="form-items-row2">
+                  <!--E-MAIL-->
+                  <div class="form-item">
+                    <input type="text" name="email" value="{{ post['email'] }}" placeholder="E-MAIL" required>
+                    {{ errors.email|join("<br>")|errorMessage|raw }}
+                  </div>
+                  <!--TEL-->
+                  <div class="form-item">
+                    <input type="text" name="tel" value="{{ post['tel'] }}" placeholder="TEL" required>
+                    {{ errors.tel|join("<br>")|errorMessage|raw }}
+                  </div>
+                </div>
+                <!--お問い合わせ内容-->
+                <div class="form-item form-item-select">
+                  <select name="type" required>
+                    <option selected="" value="" disabled="" class="def">お問い合わせ内容</option>
+                    <option value="お仕事のご依頼"{% if post['type'] == 'お仕事のご依頼' %} selected{% endif %}>お仕事のご依頼</option>
+                    <option value="サービスについてのお問い合わせ"{% if post['type'] == 'サービスについてのお問い合わせ' %} selected{% endif %}>サービスについてのお問い合わせ</option>
+                    <option value="Happy Endingカードセミナーのご依頼"{% if post['type'] == 'Happy Endingカードセミナーのご依頼' %} selected{% endif %}>Happy Endingカードセミナーのご依頼</option>
+                    <option value="遺言書のご相談"{% if post['type'] == '遺言書のご相談' %} selected{% endif %}>遺言書のご相談</option>
+                    <option value="取材のご依頼"{% if post['type'] == '取材のご依頼' %} selected{% endif %}>取材のご依頼</option>
+                    <option value="事業提携のご相談"{% if post['type'] == '事業提携のご相談' %} selected{% endif %}>事業提携のご相談</option>
+                    <option value="MY LIST 100 のサンプル申し込み"{% if post['type'] == 'MY LIST 100 のサンプル申し込み' %} selected{% endif %}>MY LIST 100 のサンプル申し込み</option>
+                    <option value="その他お問い合わせ"{% if post['type'] == 'その他お問い合わせ' %} selected{% endif %}>その他お問い合わせ</option>
+                  </select>
+                  {{ errors.type|join("<br>")|errorMessage|raw }}
+                </div>
+                <!--メッセージ-->
+                <div class="form-item">
+                  <textarea name="message" rows="7" placeholder="メッセージを入力してください/PLEASE WRITE DOWN HERE.">{{ post['message'] }}</textarea>
+                  <p class="kome-01 font-yugo">※いただいた情報は弊社の定める<br class="sp"><a href="/policy/" target="_blank">プライバシーポリシー</a>に<br class="sp">同意したとみなされます。</p>
+                </div>
+                <!--エラーメッセージ-->
+                {% if errors %}
+                <div class="err-mes font-yugo" role="alert">入力内容に問題があります。<br class="sp">確認して再度お試しください。</div>
+                {% endif %}
+                <!--SUBMIT-->
+                <div class="submit round-btn-arrow btn-color-black">
+                  <input type="submit" name="action" value="SEND">
+                </div>
+              </div>
+              <input type="hidden" name="token" value="{{ token }}">
+            </form>
+          </section>
+        </main>
+        <!--FOOTER-->
+        <section class="footer" id="footer"></section>
+      </div>
+    </div>
+    <div class="webfont-chars font-yugo">利⽤規約プライバシーポリシー〒141-0001 東京都品川区北品川5-5-15TEL : 050-5850-2698</div>
+  </body>
+</html>
