@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-error_reporting(-1);
-ini_set('display_errors', 1);
+error_reporting(0);
+ini_set('display_errors', 0);
 
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
@@ -28,16 +28,6 @@ function errorMessage($errors)
 function send($to, $subject, $body, $from)
 {
     $mail = new PHPMailer;
-
-//    $mail->SMTPDebug = 3;
-//    $mail->Debugoutput = function($str, $level) {echo "debug level $level; message: $str<br>";};
-
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->Username = '46d598f85ec936';
-    $mail->Password = '234878e6d02009';
-    $mail->Port = 2525;
-    $mail->Host = 'smtp.mailtrap.io';
 
     $mail->CharSet = "UTF-8";
     $mail->Encoding = "base64";
