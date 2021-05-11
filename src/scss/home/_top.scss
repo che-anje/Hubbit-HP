@@ -10,19 +10,17 @@ SMALL
     height: 100vh;
     min-height: 550px;
     .main-txt{
-      margin:0 auto;
+      /*margin:0 auto;
       height: 40vw;
-      max-height: 192px;
+      max-height: 192px;*/
+      width:938px;
     }
     .main-txt-s{
-      width:54vw;
-      max-width:300px;
-      margin:17px auto 0;
-      padding-right: 16vw;
+      width:130px;
     }
     .catch-phrase{
       width:321px;
-      margin:40px auto 0;
+      margin:230px auto 0;
     }
   }
 }
@@ -50,7 +48,7 @@ LARGE
       position: absolute;
       top:50%;
       left:50%;
-      margin-top:210px;
+      margin-top:235px;
       margin-left:-358px;
     }
     .catch-phrase{

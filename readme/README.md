@@ -18,7 +18,7 @@ $ gulp
 
 # pugについて
 
-- bodyタグにcssクラスやidをつけるときは下記のような感じでできます。（/lineup/micellar-sensitive/index.pugをご参考ください）
+- bodyタグにcssクラスやidをつけるときは下記のような感じでできます。
 
 ```
 extends ./_component/_layout

@@ -7,15 +7,32 @@ $char-delay-step:75;
   section.top{
     .main-txt{
       text-align: center;
-      svg{
-        /*width:92vw;
-        max-width:450px;*/
+      /*svg{
+        width:92vw;
+        max-width:450px;
         width:345px;
+      }*/
+      .page-home &{
+        width:938px;
+        height: 395px;
+        position: absolute;
+        top:146px;
+        left:50%;
+        transform:scale(.368) translateX(-469px);
+        transform-origin:0 0;
+        .char{
+          background-image: url("/assets/images/home/top/death-data.png");
+          background-size: 938px 395px;
+        }
       }
     }
     .main-txt-s{
       opacity: 0;
       transform:translateX(25px);
+      position: absolute;
+      top:310px;
+      left:50%;
+      margin-left:-100px;
     }
     .catch-phrase{
       opacity: 0;
@@ -27,8 +44,16 @@ $char-delay-step:75;
 @media #{$large}{
   section.top{
     .main-txt{
-      svg{
+      /*svg{
         width:100%;
+      }*/
+      width:938px;
+      .page-home &{
+        height: 395px;
+        .char{
+          background-image: url("/assets/images/home/top/death-data.png");
+          background-size: 938px 395px;
+        }
       }
     }
     .main-txt-s{
@@ -48,51 +73,90 @@ $char-delay-step:75;
 
 section.top{
   .main-txt{
-    svg{
+    /*svg{
       fill:#000000;
+    }*/
+    position: relative;
+    .main-txt-row{
+      font-size: 0;
+      white-space: nowrap;
     }
     .char{
-      fill-opacity: 0;
+      /*fill-opacity: 0;*/
+      opacity: 0;
       transform: translateY(50px);
+      display: inline-block;
+      height: 395px * .5;
     }
     .char-line{
       transform:scaleX(0);
+      transform-origin:0 0;
     }
     .char-01{
       animation-delay: 0ms;
+      width:375px * .5;
+      background-position: 0 0;
     }
     .char-02{
       animation-delay: 1ms * $char-delay-step;
+      width:330px * .5;
+      background-position: -187px 0;
     }
     .char-03{
       animation-delay: 2ms * $char-delay-step;
+      width:395px * .5;
+      background-position: -352px 0;
     }
     .char-04{
       animation-delay: 3ms * $char-delay-step;
+      width:360px * .5;
+      background-position: -550px 0;
     }
     .char-05{
       animation-delay: 4ms * $char-delay-step;
+      width:415px * .5;
+      background-position: -730px 0;
     }
     .char-06{
       animation-delay: 5ms * $char-delay-step;
+      width:740px * .5;
+      background-position: 0 -197px;
     }
     .char-07{
       animation-delay: 6ms * $char-delay-step;
+      width:410px * .5;
+      background-position: -370px -197px;
     }
     .char-08{
       animation-delay: 7ms * $char-delay-step;
+      width:340px * .5;
+      background-position: -575px -197px;
     }
     .char-09{
       animation-delay: 8ms * $char-delay-step;
+      width:385px * .5;
+      background-position: -745px -197px;
     }
     .char-line-01{
       transition:1000ms;
       transition-delay: 300ms;
+      width:930px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      top:165px;
+      left:2px;
     }
     .char-line-02{
       transition:800ms;
       transition-delay: 800ms;
-      transform-origin:227px 0;
+      /*transform-origin:227px 0;*/
+      width:739px;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      top:394.5px;
+      left:197px;
     }
   }
   .main-txt-s{
@@ -204,11 +268,13 @@ section.top{
 
 @keyframes charanim{
   from{
-    fill-opacity: 0;
+    /*fill-opacity: 0;*/
+    opacity: 0;
     transform: translateY(50px);
   }
   to{
-    fill-opacity: 1;
+    /*fill-opacity: 1;*/
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -259,6 +325,9 @@ SMALL
         transform-origin: right bottom;
         transform:scale(.6);
         white-space: nowrap;
+        .page-home &{
+          bottom:20px;
+        }
         &::before{
           content:"";
           width:4px;
@@ -290,6 +359,9 @@ SMALL
         transform-origin: left bottom;
         transform:scale(.6);
         white-space: nowrap;
+        .page-home &{
+          bottom:25px;
+        }
         &::before{
           content:"";
           width:90px;

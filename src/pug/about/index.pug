@@ -2,29 +2,29 @@ extends ../_component/_layout
 
 block title
 
-  title 私たちについて | Hubbit,inc
+  title ABOUT | Hubbit,inc
 
 block description
 
-  meta(name="description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(name="description",content="⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、サービス開発を⾏っています。")
 
 block ogp
 
   meta(property="og:locale",content="ja_JP")
   meta(property="og:site_name",content="Hubbit,inc")
   meta(property="og:type",content="website")
-  meta(property="og:url",content="https://www.hubbit.io/about/")
-  meta(property="og:title",content="私たちについて | Hubbit,inc")
-  meta(property="og:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
-  meta(property="og:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
+  meta(property="og:url",content="https://www.hubbit.io/about")
+  meta(property="og:title",content="ABOUT | Hubbit,inc")
+  meta(property="og:image",content="https://www.hubbit.io/assets/images/ogp.jpg")
+  meta(property="og:description",content="⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、サービス開発を⾏っています。")
   meta(name="twitter:card",content="summary_large_image")
   meta(name="twitter:title",content="私たちについて| Hubbit,inc")
-  meta(name="twitter:description",content="Hubbit株式会社は、誰でも尊厳を保ちながら楽しく安心して過ごせる社会を実現すために事業を展開しています。")
-  meta(name="twitter:image",content="https://static.wixstatic.com/media/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png/v1/fit/w_2500,h_1330,al_c/bd6c67_3c8a751149d746b29857298974910e80%7Emv2.png")
+  meta(name="twitter:description",content="⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、サービス開発を⾏っています。")
+  meta(name="twitter:image",content="https://www.hubbit.io/assets/images/ogp.jpg")
 
 block seo
 
-  link(rel="canonical",href="https://www.hubbit.io/about/")
+  link(rel="canonical",href="https://www.hubbit.io/about")
 
 block linkfiles
 
@@ -99,32 +99,10 @@ block body
           
           p.main-txt.font-yugo.animation-up
             |⼈の終末期におけるAIを活⽤したアプリケーションの開発・運営を中⼼とした、
-            br
+            br.pc
             |サービス開発を⾏っています。
 
           .boxes.animation-up
-            .box.box-business
-              h3.box-title
-                span.box-title-ja
-                  |事業内容&nbsp;/&nbsp;
-                span.box-title-en.font-corm-600
-                  |BUSINESS
-              .box-body
-                ul
-                  li
-                    |・シニア向けタブレットの開発・運営
-                  li
-                    |・⾃社保有するデータの統計結果、AIの提供
-                  li
-                    |・データの収集⼿段と分析基盤および定期レポートの提供
-                  li
-                    |・データを活⽤した新規事業開発コンサルティング
-                  li
-                    |・医療施設、介護施設向けの業務効率化ツールの開発
-                  li
-                    |・医療施設、介護施設のIT化⽀援、業務効率化⽀援
-                  li
-                    |・セカンドライフに関するメディア受託、運営
             .box.box-profile
               h3.box-title
                 span.box-title-ja
@@ -153,6 +131,30 @@ block body
                     |代表
                   dd.font-yugo
                     |⾅井 貴紀
+
+            .box.box-business
+              h3.box-title
+                span.box-title-ja
+                  |事業内容&nbsp;/&nbsp;
+                span.box-title-en.font-corm-600
+                  |BUSINESS
+              .box-body
+                ul
+                  li
+                    |・シニア向けタブレットの開発・運営
+                  li
+                    |・⾃社保有するデータの統計結果、AIの提供
+                  li
+                    |・データの収集⼿段と分析基盤および定期レポートの提供
+                  li
+                    |・データを活⽤した新規事業開発コンサルティング
+                  li
+                    |・医療施設、介護施設向けの業務効率化ツールの開発
+                  li
+                    |・医療施設、介護施設のIT化⽀援、業務効率化⽀援
+                  li
+                    |・セカンドライフに関するメディア受託、運営
+            
                 
         //NEWS
         section.news#news
@@ -390,7 +392,7 @@ block body
             |⼀緒に未来を創っていく”
             br
             |仲間を募集しています。
-          a.round-btn-arrow(href='/recruit/')
+          a.round-btn-arrow(href='https://en-gage.net/hubbit/',target='_blank')
             span.font-corm-600 VIEW MORE
 
         //CONTACT
