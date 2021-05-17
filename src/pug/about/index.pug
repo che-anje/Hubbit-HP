@@ -157,7 +157,7 @@ block body
             
                 
         //NEWS
-        section.news#news
+        section.news#news 
           .title.animation-right-in
             h2.title-ja.text-anim.scroll-trigger お知らせ
             .title-en.font-corm-400
@@ -165,42 +165,39 @@ block body
               br
               |RELEASE
           .news-list.animation-up
-            ul 
-              li
-                .news-box
-                  .news-box-date
-                    span.font-corm-600 2020.07.21
-                  .news-box-body
-                    p.news-box-txt-01.font-yugo
-                      |『月刊 仏事』に掲載いただきました。
-              li
-                .news-box
-                  .news-box-date
-                    span.font-corm-600 2020.06.19
-                  .news-box-body
-                    p.news-box-txt-01.font-yugo
-                      |『月刊 仏事』に掲載いただきました。
-              li
-                .news-box
-                  .news-box-date
-                    span.font-corm-600 2020.04.21
-                  .news-box-body
-                    p.news-box-txt-01.font-yugo
-                      |Yahoo!ニュースに掲載いただきました。​
-              li
-                .news-box
-                  .news-box-date
-                    span.font-corm-600 2020.04.21
-                  .news-box-body
-                    p.news-box-txt-01.font-yugo
-                      |『日刊ゲンダイ』に掲載いただきました。
-              li
-                .news-box
-                  .news-box-date
-                    span.font-corm-600 2020.02.06
-                  .news-box-body
-                    p.news-box-txt-01.font-yugo
-                      |『週刊金曜日』に掲載いただきました。
+            ul
+              -
+                var news = [
+                  {
+                    date: '2020.07.21',
+                    title: '『月刊 仏事』に掲載いただきました。',
+                  },
+                  {
+                    date: '2020.06.19',
+                    title: '『月刊 仏事』に掲載いただきました。​',
+                  },
+                  {
+                    date: '2020.04.21',
+                    title: 'Yahoo!ニュースに掲載いただきました。​​',
+                  },
+                  {
+                    date: '2020.04.21',
+                    title: '『日刊ゲンダイ』に掲載いただきました。',
+                  },
+                  {
+                    date: '2020.02.06',
+                    title: '『週刊金曜日』に掲載いただきました。',
+                  },
+                ]
+
+              each newsItem in news
+                li
+                  .news-box
+                    .news-box-date
+                      span.font-corm-600 #{newsItem.date}
+                    .news-box-body
+                      p.news-box-txt-01.font-yugo
+                        |#{newsItem.title}
 
         //MEMBER
         section.member#member
@@ -208,109 +205,79 @@ block body
             h2.title-ja.text-anim.scroll-trigger メンバー
             .title-en.font-corm-400 MEMBER
           .boxes
-            .box.animation-up
-              .box-photo
-                img(src="/assets/images/about/member/photo-usui-kiki.jpg", alt="⾅井 貴紀")
-              .box-title
-                span.font-yugo [代表]
-              .box-name
-                span.name-ja ⾅井 貴紀
-                br
-                span.name-en.font-corm-400 Usui Kiki
-              .box-body
-                p.box-txt-01.font-yugo
-                  |91年⽯川県⽣まれ。早稲⽥⼤学卒業後、ヤフー株式会社に新卒⼊社。営業、マーケティング、新規事業開発を担当。退職後も、新規事業開発に係り、Hubbit株式会社を設⽴。
+            -
+              var members = [
+                {
+                  pic:'/assets/images/about/member/photo-usui-kiki.jpg',
+                  title:'[代表]',
+                  name_ja:'⾅井 貴紀',
+                  name_en:'Usui Kiki',
+                  intro:'91年⽯川県⽣まれ。早稲⽥⼤学卒業後、ヤフー株式会社に新卒⼊社。営業、マーケティング、新規事業開発を担当。退職後も、新規事業開発に係り、Hubbit株式会社を設⽴。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-kazuta-yoko.jpg',
+                  title:'[ディレクター]',
+                  name_ja:'数⽥ 陽⼦',
+                  name_en:'Kazuta Yoko',
+                  intro:'⼤阪府⽣まれ。介護⽤品まで⼿掛ける健康器具開発メーカーでMDと営業を経験。その後、ECサイト運営企業にて健康⾷品と化粧品の開発・MDに従事。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-sumi-yukiyo.jpg',
+                  title:'[ディレクター]',
+                  name_ja:'鷲⾒ 幸代',
+                  name_en:'Sumi Yukiyo',
+                  intro:'岐⾩県⽣まれ。不動産会社にてホステル⽴ち上げ業務と運営マネジメントを⾏ったのち、スペースの新規⽴ち上げ業務とコミュニティイベント企画・運営を⾏なっている。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-hattori-eiji.jpg',
+                  title:'[マーケター]',
+                  name_ja:'服部 英志',
+                  name_en:'Hattori Eiji',
+                  intro:'東京都⽣まれ。早稲⽥⼤学卒業後、⼤⼿営業代理店に所属しパートナー営業に従事した後、スタートアップにて新規開拓営業を数社経験し、現在に⾄る。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-nakafuji-kyohei.jpg',
+                  title:'[エンジニア]',
+                  name_ja:'中藤 恭平',
+                  name_en:'Nakafuji Kyohei',
+                  intro:'千葉県⽣まれ。東京理科⼤学卒業後、某証券会社に⼊社し基幹システムを担当。その後、⾦融系のシステム開発に従事したのち、独⽴。Hubbit株式会社にCTOとして参画。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-che-anje.jpg',
+                  title:'[エンジニア]',
+                  name_ja:'崔 央載',
+                  name_en:'Che Anje',
+                  intro:'96年⽣まれ。名古屋出⾝。トヨタの⼦会社で社会⼈デビューしたのち、エンジニアになろうと奮起し、退社独学後、Hubbit株式会社に⼊社。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-kosuda-reika.jpg',
+                  title:'[エンジニア]',
+                  name_ja:'⼩須⽥ 玲花',
+                  name_en:'Kosuda Reika',
+                  intro:'群⾺県⽣まれ。千葉⼤学⼤学院に在学中。研究室では機械学習を⽤いた医⽤画像処理に関するに研究を⾏っています。2020年6⽉にインターン⽣として参画。'
+                },
+                {
+                  pic:'/assets/images/about/member/photo-oku-haruki.jpg',
+                  title:'[デザイナー]',
+                  name_ja:'奥 春樹',
+                  name_en:'Oku Haruki',
+                  intro:'兵庫県⽣まれ。株式会社乃村⼯藝社に⼊社し、お台場のガンダム⽴像など⼤型案件を担当。その後、2019年建築設計事務所を設⽴し、Hubbitのパートナーとなる。'
+                },
+              ]
 
-            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
-              .box-photo
-                img(src="/assets/images/about/member/photo-kazuta-yoko.jpg", alt="数⽥ 陽⼦")
-              .box-title
-                span.font-yugo [ディレクター]
-              .box-name
-                span.name-ja 数⽥ 陽⼦
-                br
-                span.name-en.font-corm-400 Kazuta Yoko
-              .box-body
-                p.box-txt-01.font-yugo
-                  |⼤阪府⽣まれ。介護⽤品まで⼿掛ける健康器具開発メーカーでMDと営業を経験。その後、ECサイト運営企業にて健康⾷品と化粧品の開発・MDに従事。
-
-            .box.animation-up.anim-delay-pc-02
-              .box-photo
-                img(src="/assets/images/about/member/photo-sumi-yukiyo.jpg", alt="鷲⾒ 幸代")
-              .box-title
-                span.font-yugo [ディレクター]
-              .box-name
-                span.name-ja 鷲⾒ 幸代
-                br
-                span.name-en.font-corm-400 Sumi Yukiyo
-              .box-body
-                p.box-txt-01.font-yugo
-                  |岐⾩県⽣まれ。不動産会社にてホステル⽴ち上げ業務と運営マネジメントを⾏ったのち、スペースの新規⽴ち上げ業務とコミュニティイベント企画・運営を⾏なっている。
-
-            .box.animation-up.anim-delay-sp-01
-              .box-photo
-                img(src="/assets/images/about/member/photo-hattori-eiji.jpg", alt="服部 英志")
-              .box-title
-                span.font-yugo [マーケター]
-              .box-name
-                span.name-ja 服部 英志
-                br
-                span.name-en.font-corm-400 Hattori Eiji
-              .box-body
-                p.box-txt-01.font-yugo
-                  |東京都⽣まれ。早稲⽥⼤学卒業後、⼤⼿営業代理店に所属しパートナー営業に従事した後、スタートアップにて新規開拓営業を数社経験し、現在に⾄る。
-
-            .box.animation-up.anim-delay-pc-01
-              .box-photo
-                img(src="/assets/images/about/member/photo-nakafuji-kyohei.jpg", alt="中藤 恭平")
-              .box-title
-                span.font-yugo [エンジニア]
-              .box-name
-                span.name-ja 中藤 恭平
-                br
-                span.name-en.font-corm-400 Nakafuji Kyohei
-              .box-body
-                p.box-txt-01.font-yugo
-                  |千葉県⽣まれ。東京理科⼤学卒業後、某証券会社に⼊社し基幹システムを担当。その後、⾦融系のシステム開発に従事したのち、独⽴。Hubbit株式会社にCTOとして参画。
-
-            .box.animation-up.anim-delay-sp-01.anim-delay-pc-02
-              .box-photo
-                img(src="/assets/images/about/member/photo-che-anje.jpg", alt="崔 央載")
-              .box-title
-                span.font-yugo [エンジニア]
-              .box-name
-                span.name-ja 崔 央載
-                br
-                span.name-en.font-corm-400 Che Anje
-              .box-body
-                p.box-txt-01.font-yugo
-                  |96年⽣まれ。名古屋出⾝。トヨタの⼦会社で社会⼈デビューしたのち、エンジニアになろうと奮起し、退社独学後、Hubbit株式会社に⼊社。
-
-            .box.animation-up
-              .box-photo
-                img(src="/assets/images/about/member/photo-kosuda-reika.jpg", alt="⼩須⽥ 玲花")
-              .box-title
-                span.font-yugo [エンジニア]
-              .box-name
-                span.name-ja ⼩須⽥ 玲花
-                br
-                span.name-en.font-corm-400 Kosuda Reika
-              .box-body
-                p.box-txt-01.font-yugo
-                  |群⾺県⽣まれ。千葉⼤学⼤学院に在学中。研究室では機械学習を⽤いた医⽤画像処理に関するに研究を⾏っています。2020年6⽉にインターン⽣として参画。
-
-            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
-              .box-photo
-                img(src="/assets/images/about/member/photo-oku-haruki.jpg", alt="奥 春樹")
-              .box-title
-                span.font-yugo [デザイナー]
-              .box-name
-                span.name-ja 奥 春樹
-                br
-                span.name-en.font-corm-400 Oku Haruki
-              .box-body
-                p.box-txt-01.font-yugo
-                  |兵庫県⽣まれ。株式会社乃村⼯藝社に⼊社し、お台場のガンダム⽴像など⼤型案件を担当。その後、2019年建築設計事務所を設⽴し、Hubbitのパートナーとなる。
+            each membersItem in members
+              .box.animation-up
+                .box-photo
+                  img(src=membersItem.pic, alt=membersItem.name_ja)
+                .box-title
+                  span.font-yugo #{membersItem.title}
+                .box-name
+                  span.name-ja #{membersItem.name_ja}
+                  br
+                  span.name-en.font-corm-400 #{membersItem.name_en}
+                .box-body
+                  p.box-txt-01.font-yugo
+                    |#{membersItem.intro}
 
         //ADVISER
         section.member#adviser
@@ -318,67 +285,61 @@ block body
             h2.title-ja.text-anim.scroll-trigger 顧問
             .title-en.font-corm-400 ADVISER
           .boxes
-            .box.animation-up
-              .box-photo
-                img(src="/assets/images/about/adviser/photo-kimura-hiroaki.jpg", alt="木村 浩彰")
-              .box-title
-                span.font-yugo [データ研究協力]
-              .box-position
-                |広島大学病院
-                br.sp
-                |リハビリテーション科科長 
-                br.sp
-                |教授
-              .box-name
-                span.name-ja 木村 浩彰
-                br
-                span.name-en.font-corm-400 Kimura Hiroaki
+            -
+              var advisers = [
+                {
+                  pic:'/assets/images/about/adviser/photo-kimura-hiroaki.jpg',
+                  title:'[データ研究協力]',
+                  position:'広島大学病院<br class="sp">リハビリテーション科科長<br class="sp">教授',
+                  name_ja:'木村 浩彰',
+                  name_en:'Kimura Hiroaki',
+                },
+                {
+                  pic:'/assets/images/about/adviser/photo-bessho-naoya.jpg',
+                  title:'[アドバイザー]',
+                  position:'紀尾井町戦略研究所株式会社<br class="sp">代表取締役社長',
+                  name_ja:'別所 直哉',
+                  name_en:'Bessho Naoya',
+                  intro:'1999年にヤフー株式会社入社。法務部長、法務本部長、執行役員（法務、広報、政策企画、公共サービス、リスクマネジメント管掌）を経て2018年４月よりシニアアドバイザー、紀尾井町戦略研究所株式会社理事長。一般社団法人日本IT団体連盟理事。立教大学大学院21世紀社会デザイン研究科兼任講師も務める。',
+                  icon:'/assets/images/about/adviser/logo-ksi.png',
+                  icon_alt:'紀尾井町戦略研究所株式会社',
+                },
+                {
+                  pic:'/assets/images/about/adviser/photo-shirakawa-touko.jpg',
+                  title:'[アドバイザー]',
+                  position:'少子化ジャーナリスト',
+                  name_ja:'白河 桃子',
+                  name_en:'Shirakawa Touko',
+                  intro:'昭和女子大学客員教授、相模女子大学大学院 特任教授、東京大学 大学院情報学環客員研究員。女性のライフキャリア、ワークライフバランス、少子化、働き方改革、ダイバーシティなどをテーマとする。内閣府男女局「男女共同参画会議　重点方針専門調査会」専門委員、内閣官房「働き方改革実現会議」有識者議員など活躍多数。',
+                },
+                {
+                  pic:'/assets/images/about/adviser/photo-blank.jpg',
+                  title:'[研究会]',
+                  name_ja:'◯◯◯◯◯◯',
+                  name_en:'xxxxxxxxxx',
+                  intro:'医療と介護の狭間を超えて、今我々が目指すべきケアを考え、発信していく。',
+                },
+              ]
 
-            .box.animation-up.anim-delay-sp-01.anim-delay-pc-01
-              .box-photo
-                img(src="/assets/images/about/adviser/photo-bessho-naoya.jpg", alt="別所 直哉")
-              .box-title
-                span.font-yugo [アドバイザー]
-              .box-position
-                |紀尾井町戦略研究所株式会社 
-                br.sp
-                |代表取締役社長
-              .box-name
-                span.name-ja 別所 直哉
-                br
-                span.name-en.font-corm-400 Bessho Naoya
-                img.logo-ksi(src="/assets/images/about/adviser/logo-ksi.png",alt="紀尾井町戦略研究所株式会社")
-              .box-body
-                p.box-txt-01.font-yugo
-                  |1999年にヤフー株式会社入社。法務部長、法務本部長、執行役員（法務、広報、政策企画、公共サービス、リスクマネジメント管掌）を経て2018年４月よりシニアアドバイザー、紀尾井町戦略研究所株式会社理事長。一般社団法人日本IT団体連盟理事。立教大学大学院21世紀社会デザイン研究科兼任講師も務める。
-
-            .box.animation-up.anim-delay-pc-02
-              .box-photo
-                img(src="/assets/images/about/adviser/photo-shirakawa-touko.jpg", alt="白河 桃子")
-              .box-title
-                span.font-yugo [アドバイザー]
-              .box-position
-                |少子化ジャーナリスト
-              .box-name
-                span.name-ja 白河 桃子
-                br
-                span.name-en.font-corm-400 Shirakawa Touko
-              .box-body
-                p.box-txt-01.font-yugo
-                  |昭和女子大学客員教授、相模女子大学大学院 特任教授、東京大学 大学院情報学環客員研究員。女性のライフキャリア、ワークライフバランス、少子化、働き方改革、ダイバーシティなどをテーマとする。内閣府男女局「男女共同参画会議　重点方針専門調査会」専門委員、内閣官房「働き方改革実現会議」有識者議員など活躍多数。
-
-            .box.animation-up.anim-delay-sp-01
-              .box-photo
-                img(src="/assets/images/about/adviser/photo-blank.jpg", alt="")
-              .box-title
-                span.font-yugo [研究会]
-              .box-name
-                span.name-ja ◯◯◯◯◯◯
-                br
-                span.name-en.font-corm-400 xxxxxxxxxx
-              .box-body
-                p.box-txt-01.font-yugo
-                  |医療と介護の狭間を超えて、今我々が目指すべきケアを考え、発信していく。
+            each advisersItem in advisers
+              .box.animation-up
+                .box-photo
+                  img(src=advisersItem.pic, alt=advisersItem.name_ja)
+                .box-title
+                  span.font-yugo #{advisersItem.title}
+                if advisersItem.position!=undefined
+                  .box-position
+                    |!{advisersItem.position}
+                .box-name
+                  span.name-ja #{advisersItem.name_ja}
+                  br
+                  span.name-en.font-corm-400 #{advisersItem.name_en}
+                  if advisersItem.icon!=undefined
+                    img.icon(src=advisersItem.icon,alt=advisersItem.icon_alt)
+                if advisersItem.intro!=undefined
+                  .box-body
+                    p.box-txt-01.font-yugo
+                      |#{advisersItem.intro}
 
         //RECRUIT
         section.recruit#recruit
